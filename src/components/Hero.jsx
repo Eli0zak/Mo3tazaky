@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useMode } from '../context/ModeContext';
 
+import aboutImg from '../assets/img/about-img1.png';
+
 const Hero = () => {
     const { mode } = useMode();
     const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -48,7 +50,7 @@ const Hero = () => {
                     </div>
 
                     <div className="profile-photo-container">
-                        <img src="\img\about-img1.png" alt="Moataz Zaky Profile Photo" className="profile-photo" />
+                        <img src={aboutImg} alt="Moataz Zaky Profile Photo" className="profile-photo" />
                     </div>
 
                     <h2 className="operator-name">MOATAZ ZAKY</h2>
@@ -167,4 +169,3 @@ const SocialLink = ({ href, icon, tooltip, visible }) => {
 };
 
 export default Hero;
-

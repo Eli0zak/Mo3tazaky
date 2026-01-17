@@ -1,5 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
 import { useMode } from '../context/ModeContext';
+import ccnaImg from '../assets/img/CCNA.png';
+import essentialsImg from '../assets/img/essentials in cyber.png';
+import comptiaImg from '../assets/img/CopTIA A+.png';
+import cyberFoundationsImg from '../assets/img/cyber Security foundations.png';
+import cyberDipImg from '../assets/img/cyber sec cert.jpg';
 
 const SecurityVault = () => {
     const { mode } = useMode();
@@ -21,27 +27,27 @@ const SecurityVault = () => {
                     <VaultCard title="CERTIFICATIONS" icon="fas fa-certificate" id="cert">
                         <div className="cert-grid">
                             <CertItem
-                                img="/img/CCNA.png"
+                                img={ccnaImg}
                                 title="CCNA (200-301)"
                                 link="https://www.linkedin.com/learning/certificates/bb947d140b373939751911885bae8665a4a41ac3da9232da9c16c60181c7986a"
                             />
                             <CertItem
-                                img="/img/essentials in cyber.png"
+                                img={essentialsImg}
                                 title="Career Essentials in Cybersecurity"
                                 link="https://www.linkedin.com/learning/certificates/4d17b0b22171596bd32b1aed1112b02c3ba80627da2c7771d937ca11a8bbeefd"
                             />
                             <CertItem
-                                img="/img/CopTIA A+.png"
+                                img={comptiaImg}
                                 title="CompTIA A+ Core 1"
                                 link="https://www.linkedin.com/learning/certificates/8dbd55d6223a18c0650a92bba76dab2e720ef89aa4dbb41eb12991dff7eb5b42"
                             />
                             <CertItem
-                                img="/img/cyber Security foundations.png"
+                                img={cyberFoundationsImg}
                                 title="Cybersecurity Foundations"
                                 link="https://www.linkedin.com/learning/certificates/64320bd68a5eb1123dc28986de9fdfb7a43ac6d76ffd99c7ba05f53caf5baa01"
                             />
                             <CertItem
-                                img="/img/cyber sec cert.jpg"
+                                img={cyberDipImg}
                                 title="Cybersecurity Diploma"
                             />
                         </div>
