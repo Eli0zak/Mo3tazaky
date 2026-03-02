@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import AOS from 'aos';
 
 const ModeContext = createContext();
 
@@ -16,6 +17,10 @@ export const ModeProvider = ({ children }) => {
         } else {
             document.body.classList.remove('tech-mode');
         }
+        // Re-initialize AOS to pick up newly visible elements after mode switch
+        setTimeout(() => {
+            AOS.refresh();
+        }, 150);
     }, [mode]);
 
     return (
