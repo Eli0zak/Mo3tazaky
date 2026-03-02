@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useMode } from '../context/ModeContext';
 
-import aboutImg from '../assets/img/about-img1.png';
+import aboutImg from '../../img/about-img1.png';
 
 const Hero = () => {
     const { mode } = useMode();
