@@ -1,5 +1,5 @@
 import React from 'react';
-import ModeToggle from '../components/ModeToggle';
+import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import OperationsRoadmap from '../components/OperationsRoadmap';
 import SecurityVault from '../components/SecurityVault';
@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 const Home = () => {
     return (
         <>
-            <ModeToggle />
+            <Navbar />
             <Hero />
             <OperationsRoadmap />
             <SecurityVault />
