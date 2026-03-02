@@ -7,6 +7,60 @@ const GrowthLab = () => {
 
     if (mode === 'business') return null;
 
+    const projects = [
+        {
+            id: 'ioms',
+            title: 'IOMS - Institute Operations Management System',
+            type: 'Full-Stack Web App',
+            desc: 'Comprehensive management system for Instant Academy managing 100+ student groups, smart Zoom scheduling, financial tracking, and automated daily reporting.',
+            tech: ['Node.js', 'Express.js', 'SQLite', 'Vanilla JS', 'JWT'],
+        },
+        {
+            id: 'zoom-automation',
+            title: 'Zoom Recording Automation (Zapier)',
+            type: 'Automation / No-Code',
+            desc: 'Full automation pipeline for 22 Zoom accounts — recordings auto-upload to correct Google Drive folder out of 100+ using Dynamic Mapping. Saves 2+ hrs/day.',
+            tech: ['Zapier', 'Zoom API', 'Google Drive API', 'Webhooks'],
+        },
+        {
+            id: 'whatsapp-crm-extension',
+            title: 'WhatsApp CRM Chrome Extension',
+            type: 'Chrome Extension',
+            desc: 'Built-in customer data sidebar inside WhatsApp Web. Auto-fetches and displays full customer profile from Google Sheets/ERP when agent opens a chat.',
+            tech: ['JavaScript', 'Chrome Extensions API', 'Google Sheets API'],
+        },
+        {
+            id: 'pettouch',
+            title: 'PetTouch - Smart Pet Management',
+            type: 'Full-Stack Web App',
+            desc: 'NFC-based pet management platform with digital pet profiles, medical records, Lost Mode alerts, and bilingual (Arabic/English) responsive dashboard.',
+            tech: ['React.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
+        },
+        {
+            id: 'zak-hunt',
+            title: 'ZAK-Hunt',
+            type: 'Cybersecurity Tool',
+            desc: 'Multi-threaded CLI reconnaissance tool integrating Nmap and Gobuster for comprehensive network security assessment and vulnerability exploration.',
+            tech: ['Python', 'Nmap', 'Gobuster', 'Multi-threading'],
+        },
+        {
+            id: 'whatsapp-bulk-sender',
+            title: 'WhatsApp Bulk Sender',
+            type: 'Chrome Extension',
+            desc: 'Automated personalized WhatsApp messaging from Excel sheets with dynamic templates, intelligent anti-ban delays, and real-time progress tracking.',
+            tech: ['JavaScript', 'Chrome Extensions', 'SheetJS (XLSX)'],
+        },
+    ];
+
+    const vibeTools = [
+        { icon: 'fas fa-robot', name: 'Lovable' },
+        { icon: 'fas fa-brain', name: 'Claude AI' },
+        { icon: 'fas fa-code', name: 'Cursor' },
+        { icon: 'fas fa-bolt', name: 'v0.dev' },
+        { icon: 'fas fa-magic', name: 'Gemini' },
+        { icon: 'fas fa-stars', name: 'ChatGPT' },
+    ];
+
     return (
         <section id="growth-lab" className="growth-lab tech-mode-content">
             <div className="container">
@@ -15,11 +69,10 @@ const GrowthLab = () => {
                         <span className="title-icon">🚀</span>
                         GROWTH LAB
                     </h2>
-                    <p className="section-subtitle">Continuous Evolution & Innovation - Many Projects & Certifications</p>
+                    <p className="section-subtitle">Continuous Evolution & Innovation — Building Real Solutions</p>
                 </div>
 
                 <div className="lab-grid">
-                    {/* Projects Section - NOW FIRST */}
                     <div className="lab-card projects-card" data-aos="fade-left">
                         <div className="card-icon">
                             <i className="fas fa-project-diagram"></i>
@@ -27,88 +80,44 @@ const GrowthLab = () => {
                         <h3 className="card-title">KEY PROJECTS</h3>
 
                         <div className="projects-grid">
-                            <ProjectItem
-                                id="zak-hunt"
-                                title="ZAK-Hunt"
-                                type="Cybersecurity Tool"
-                                desc="Multi-threaded reconnaissance tool integrating Nmap and Gobuster for comprehensive network security assessment and vulnerability exploration."
-                                tech={["Python", "Nmap", "Gobuster", "Multi-threading"]}
-                            />
-
-                            <ProjectItem
-                                id="pettouch"
-                                title="PetTouch - Smart Pet Management"
-                                type="Full-Stack Web Application"
-                                desc="Comprehensive pet management platform with NFC tag integration, real-time notifications, and multilingual support (Arabic/English)."
-                                tech={["React", "Supabase", "TypeScript", "NFC Integration"]}
-                            />
-
-                            <ProjectItem
-                                id="whatsapp-automation"
-                                title="WhatsApp Automation Extension"
-                                type="Chrome Extension"
-                                desc="Automated WhatsApp messaging system with Excel integration, template management, and anti-ban protection features."
-                                tech={["JavaScript", "Chrome API", "SheetJS", "Automation"]}
-                            />
-
-                            <ProjectItem
-                                id="instant-academy"
-                                title="Instant Academy CRM"
-                                type="Business Management System"
-                                desc="Complete CRM solution for educational institutions with session management, Zoom integration, and comprehensive reporting."
-                                tech={["React", "Node.js", "PostgreSQL", "Zoom API"]}
-                            />
-                        </div>
-
-                        {/* Vibe Coding Tools Section */}
-                        <div className="vibe-coding-section">
-                            <div className="vibe-header">
-                                <i className="fas fa-magic"></i>
-                                <h4>AI-Powered Development Tools Expertise</h4>
-                            </div>
-                            <p className="vibe-description">
-                                Proficient in leveraging cutting-edge AI coding assistants to accelerate development and enhance code quality:
-                            </p>
-                            <div className="vibe-tools-grid">
-                                <VibeTool icon="fas fa-robot" name="Cursor AI" />
-                                <VibeTool icon="fas fa-wind" name="Windsurf" />
-                                <VibeTool icon="fas fa-code-branch" name="Cline" />
-                                <VibeTool icon="fas fa-brain" name="GitHub Copilot" />
-                                <VibeTool icon="fas fa-sparkles" name="Gemini AI" />
-                                <VibeTool icon="fas fa-bolt" name="Claude AI" />
-                            </div>
-                            <p className="vibe-impact">
-                                <i className="fas fa-chart-line"></i>
-                                <strong>Result:</strong> 10x faster development cycles with AI-assisted coding, debugging, and architecture design
-                            </p>
+                            {projects.map((p) => (
+                                <ProjectItem key={p.id} {...p} />
+                            ))}
                         </div>
                     </div>
 
-                    {/* Education Section - NOW LAST AND COMPACT */}
-                    <div className="lab-card education-card" data-aos="fade-up">
-                        <div className="education-content-wrapper">
-                            <div className="card-icon mini-icon">
-                                <i className="fas fa-graduation-cap"></i>
-                            </div>
-                            <div className="education-details">
-                                <h3 className="card-title mini-title">EDUCATION</h3>
-                                <div className="education-item mini-item">
-                                    <h4>Higher Institute for Cooperative Studies and Business Administration</h4>
-                                    <p className="degree">Bachelor's Degree in Business Administration</p>
-                                </div>
-                            </div>
-                            <div className="education-extras">
-                                <span className="edu-status">
-                                    <i className="fas fa-flask"></i>
-                                    Continuous Learning Mode Active
-                                </span>
-                                <div className="education-badges">
-                                    <span className="badge">Business Management</span>
-                                    <span className="badge">Strategic Thinking</span>
-                                    <span className="badge">Financial Analysis</span>
-                                </div>
-                            </div>
+                    <div className="lab-card vibe-tools-card" data-aos="fade-right">
+                        <div className="card-icon">
+                            <i className="fas fa-microchip"></i>
                         </div>
+                        <h3 className="card-title">AI-POWERED DEVELOPMENT</h3>
+                        <p className="card-subtitle">Proficient in leveraging cutting-edge AI coding assistants to accelerate development:</p>
+
+                        <div className="vibe-tools-grid">
+                            {vibeTools.map((tool, i) => (
+                                <VibeTool key={i} icon={tool.icon} name={tool.name} />
+                            ))}
+                        </div>
+
+                        <p className="impact-text">
+                            <strong>Result:</strong> 10x faster development cycles with AI-assisted coding, debugging, and architecture design
+                        </p>
+                    </div>
+
+                    <div className="lab-card education-card" data-aos="fade-up">
+                        <div className="card-icon">
+                            <i className="fas fa-university"></i>
+                        </div>
+                        <h3 className="card-title">EDUCATION</h3>
+                        <h4 className="edu-title">Higher Institute for Cooperative Studies & Business Administration (HCM)</h4>
+                        <p className="edu-degree">Bachelor's Degree in Business Administration</p>
+                        <p className="edu-years">2022 — 2026</p>
+                        <div className="edu-tags">
+                            <span className="edu-tag">Business Management</span>
+                            <span className="edu-tag">Strategic Thinking</span>
+                            <span className="edu-tag">Financial Analysis</span>
+                        </div>
+                        <span className="learning-badge">Continuous Learning Mode Active</span>
                     </div>
                 </div>
             </div>
@@ -117,19 +126,14 @@ const GrowthLab = () => {
 };
 
 const ProjectItem = ({ id, title, type, desc, tech }) => (
-    <div className="project-item">
-        <div className="project-header">
-            <Link to={`/projects/${id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <h4>{title}</h4>
-                <i className="fas fa-external-link-alt" style={{ fontSize: '0.9rem', color: 'var(--primary-blue)' }}></i>
-            </Link>
-            <span className="project-type">{type}</span>
-        </div>
-        <p className="project-description">{desc}</p>
-        <div className="project-tech">
+    <Link to={`/projects/${id}`} className="project-item">
+        <h4 className="project-title">{title}</h4>
+        <span className="project-type">{type}</span>
+        <p className="project-desc">{desc}</p>
+        <div className="tech-tags">
             {tech.map((t, i) => <span key={i} className="tech-tag">{t}</span>)}
         </div>
-    </div>
+    </Link>
 );
 
 const VibeTool = ({ icon, name }) => (
