@@ -46,9 +46,8 @@ function Navbar() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
         >
             <div className="nav-inner">
-                <button onClick={() => handleNavClick('#hero')} className="nav-logo" style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-                    <span className="nav-logo-dot" />
-                    MZ
+                <button onClick={() => handleNavClick('#hero')} className="nav-logo" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <img src="/logo.png" alt="MZ Logo" style={{ height: '48px', width: 'auto' }} />
                 </button>
                 <div className="nav-links">
                     {links.map((l) => (

@@ -174,11 +174,9 @@ export default function HeroSection() {
                     {/* Left Column: Photo & Name */}
                     <motion.div className="hero-col-left" variants={itemVariants}>
                         {/* Profile Photo */}
-                        <motion.div className="profile-photo-container">
-                            <div className="profile-photo-ring">
-                                <div className="profile-photo-placeholder">
-                                    <span className="profile-initials">MZ</span>
-                                </div>
+                        <motion.div className="profile-photo-container" style={{ width: '220px', height: '220px', margin: '0 auto 1.5rem', position: 'relative' }}>
+                            <div className="profile-photo-ring" style={{ width: '100%', height: '100%', padding: '4px', background: 'linear-gradient(45deg, var(--primary-blue), transparent)', borderRadius: '50%' }}>
+                                <img src="/photo.png" alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)' }} />
                             </div>
                         </motion.div>
 
