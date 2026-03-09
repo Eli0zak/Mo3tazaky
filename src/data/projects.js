@@ -1,184 +1,271 @@
-export const projectsData = {
-  "ioms": {
-    id: "ioms",
-    title: "IOMS - Institute Operations Management System",
-    subtitle: "Full-Stack Educational Institute Management Platform",
-    gradient: "linear-gradient(135deg, var(--primary-blue), #FF6B6B)",
-    overview: "IOMS is a comprehensive web application built to manage all operational aspects of educational institutes like Instant Academy. It handles 100+ active student groups, Zoom account scheduling with smart conflict detection, financial tracking with visual traffic lights, and automated daily reporting — all built from scratch with Node.js and vanilla JavaScript.",
-    icon: "fas fa-graduation-cap",
-    screenshotLabel: "IOMS Dashboard",
-    keyFeatures: [
-      "Smart Zoom account capacity management (supports 2 parallel sessions per account)",
-      "Financial Traffic Light system — color-coded payment status per group",
-      "Role-based access control (Admin / Agent) with JWT auth",
-      "Full CRUD for 100+ groups, schedules, tasks, and daily logs",
-      "Advanced search, 5 themes, 20+ keyboard shortcuts, undo/redo",
-      "Responsive across desktop, tablet, and mobile"
-    ],
-    techStack: ["Node.js", "Express.js", "SQL.js (SQLite)", "Vanilla JavaScript", "CSS3", "JWT", "bcrypt"],
-    useCases: [
-      "Managing Instant Academy's 100+ active student groups",
-      "Automating Zoom session scheduling across 22 accounts",
-      "Tracking instructor and student daily activity logs",
-      "Financial monitoring and dues management"
-    ],
-    links: [
-      { label: "View on GitHub", url: "https://github.com/Eli0zak/IOMS", icon: "fab fa-github" }
-    ]
-  },
-  "zoom-automation": {
-    id: "zoom-automation",
-    title: "Zoom Recording Automation",
-    subtitle: "100% Automated Zoom-to-Drive Pipeline via Zapier",
-    gradient: "linear-gradient(135deg, var(--primary-blue), var(--accent-purple))",
-    overview: "Built a full automation system at Instant Software Solutions that eliminates manual downloading and uploading of Zoom recordings. The system uses Zapier with a smart Webhook connected to 22 Zoom accounts. The moment a recording ends, it automatically identifies the correct student group folder from 100+ Google Drive folders using Dynamic Mapping and sends an instant notification — saving 2+ hours of daily manual work per team member.",
-    icon: "fas fa-video",
-    screenshotLabel: "Automation Flow Diagram",
-    keyFeatures: [
-      "Webhook listener connected to 22 Zoom accounts simultaneously",
-      "Dynamic Mapping to identify the correct folder among 100+ Google Drive folders",
-      "Instant notification system when recording is ready",
-      "Zero human intervention — 0 errors, 0 manual uploads",
-      "2+ hours saved daily per operations team member"
-    ],
-    techStack: ["Zapier", "Zoom API", "Google Drive API", "Webhooks", "Dynamic Mapping"],
-    useCases: [
-      "Automating recording uploads for Instant Academy's 100+ active groups",
-      "Eliminating manual file transfers across 22 Zoom accounts",
-      "Operations workflow optimization at scale"
-    ],
-    links: [
-      { label: "View LinkedIn Post", url: "https://www.linkedin.com/in/moatazaky/", icon: "fab fa-linkedin" }
-    ]
-  },
-  "whatsapp-crm-extension": {
-    id: "whatsapp-crm-extension",
-    title: "WhatsApp CRM Chrome Extension",
-    subtitle: "Real-time Customer Data Sidebar Inside WhatsApp Web",
-    gradient: "linear-gradient(135deg, var(--primary-blue), #25D366)",
-    overview: "Designed and built a Chrome Extension that lives inside WhatsApp Web. When an agent opens a customer chat, it automatically reads the phone number, queries the company's database (Google Sheets or ERP), and displays the full customer profile in a sidebar — without leaving WhatsApp. Agents can also edit and update customer data directly from the extension, reducing average lookup time from 2 minutes to 0 seconds.",
-    icon: "fab fa-whatsapp",
-    screenshotLabel: "Extension Interface Screenshot",
-    keyFeatures: [
-      "Auto-detects customer phone number from active WhatsApp chat",
-      "Fetches full customer profile from Google Sheets or ERP in real-time",
-      "Inline data editing — update records without leaving WhatsApp",
-      "Reduces context switching between tabs by 100%",
-      "0% data entry errors — no manual copy-paste",
-      "Response time doubled due to instant customer context"
-    ],
-    techStack: ["JavaScript (ES6+)", "Chrome Extensions API", "Google Sheets API", "DOM Manipulation", "CSS3"],
-    useCases: [
-      "Customer service teams using WhatsApp Business",
-      "Operations agents needing instant customer lookup",
-      "Companies with ERP/CRM integration needs"
-    ],
-    links: [
-      { label: "View LinkedIn Post", url: "https://www.linkedin.com/in/moatazaky/", icon: "fab fa-linkedin" }
-    ]
-  },
-  "pettouch": {
-    id: "pettouch",
-    title: "PetTouch",
-    subtitle: "Smart NFC-Based Pet Management Platform",
-    gradient: "linear-gradient(135deg, var(--primary-blue), var(--accent-green))",
-    overview: "PetTouch is a full-stack web application that helps pet owners manage their pets' profiles, medical history, vaccinations, and safety using NFC tag technology. When someone scans the NFC tag on a pet's collar, they instantly see the pet's profile and can trigger a 'Lost Mode' alert. The platform is bilingual (Arabic & English) and features a responsive dashboard with dark mode support.",
-    icon: "fas fa-paw",
-    screenshotLabel: "PetTouch Interface Screenshot",
-    keyFeatures: [
-      "NFC Tag Integration for instant pet identification on scan",
-      "Digital Pet Profile with full medical history and vaccinations",
-      "'Lost Mode' with geolocation alerts for missing pets",
-      "Bilingual support: Arabic (RTL) & English with i18next",
-      "Supabase backend for real-time auth and database",
-      "Interactive map with Leaflet.js for pet location tracking"
-    ],
-    techStack: ["React.js", "TypeScript", "Supabase", "Tailwind CSS", "i18next", "Leaflet.js"],
-    useCases: [
-      "Pet owners wanting digital health records",
-      "Lost pet recovery via NFC scanning",
-      "Vet clinics for streamlined pet data access"
-    ],
-    links: [
-      { label: "Live Demo", url: "https://pettouchv1.vercel.app", icon: "fas fa-external-link-alt" },
-      { label: "View on GitHub", url: "https://github.com/Eli0zak/pettouchv1", icon: "fab fa-github" }
-    ]
-  },
-  "whatsapp-bulk-sender": {
-    id: "whatsapp-bulk-sender",
-    title: "WhatsApp Bulk Sender",
-    subtitle: "Advanced Chrome Extension for Automated Personalized Messaging",
-    gradient: "linear-gradient(135deg, #25D366, var(--accent-green))",
-    overview: "A powerful Chrome Extension for automating personalized WhatsApp messages from Excel sheets. Used by educational institutions and businesses to send thousands of personalized messages with dynamic templates, intelligent random delays to simulate human behavior and avoid bans, and a real-time progress dashboard.",
-    icon: "fas fa-paper-plane",
-    screenshotLabel: "Extension Interface Screenshot",
-    keyFeatures: [
-      "Excel/XLSX file parsing for bulk contact lists",
-      "Dynamic message templates with placeholders ({Name}, {Date}, {Code})",
-      "Intelligent random delays to avoid WhatsApp detection and bans",
-      "Real-time progress bar and per-contact status tracking",
-      "Pause, Resume, and Stop controls during sending",
-      "Chrome Storage integration for saving message templates"
-    ],
-    techStack: ["JavaScript (ES6+)", "Chrome Extensions MVC", "SheetJS (XLSX)", "HTML5", "CSS3"],
-    useCases: [
-      "Educational institutes sending enrollment notifications",
-      "Businesses sending bulk personalized offers",
-      "HR teams sending interview invitations at scale"
-    ],
-    links: [
-      { label: "LinkedIn Profile", url: "https://www.linkedin.com/in/moatazaky/", icon: "fab fa-linkedin" }
-    ]
-  },
-  "zak-hunt": {
-    id: "zak-hunt",
-    title: "ZAK-Hunt",
-    subtitle: "Multi-threaded Cybersecurity Reconnaissance Tool",
-    gradient: "linear-gradient(135deg, var(--accent-purple), #ff4757)",
-    overview: "ZAK-Hunt is a CLI-based Python tool for cybersecurity professionals and ethical hackers. It combines Nmap for network discovery and Gobuster for directory enumeration into a single multi-threaded reconnaissance workflow, with detailed reporting and logging for security assessments.",
-    icon: "fas fa-shield-alt",
-    screenshotLabel: "ZAK-Hunt CLI Output",
-    keyFeatures: [
-      "Multi-threaded scanning for dramatically improved performance",
-      "Nmap integration for network discovery and port/service auditing",
-      "Gobuster integration for directory and file enumeration",
-      "Comprehensive vulnerability assessment and reporting",
-      "Detailed output logging for documentation",
-      "User-friendly CLI interface"
-    ],
-    techStack: ["Python", "Nmap", "Gobuster", "Multi-threading", "Linux", "Bash Scripting"],
-    useCases: [
-      "Penetration testing and network security assessments",
-      "Bug bounty reconnaissance automation",
-      "Web application security testing",
-      "Cybersecurity students and CTF players"
-    ],
-    links: [
-      { label: "View on GitHub", url: "https://github.com/Eli0zak/zak-hunt", icon: "fab fa-github" }
-    ]
-  },
-  "software-master": {
-    id: "software-master",
-    title: "Software Master",
-    subtitle: "Professional Software Agency Landing Platform",
-    gradient: "linear-gradient(135deg, var(--primary-blue), var(--accent-orange))",
-    overview: "A modern, high-performance landing and showcase platform built with TypeScript and React for a software agency. Features smooth animations, service showcases, and a lead generation system designed to convert visitors into clients.",
-    icon: "fas fa-laptop-code",
-    screenshotLabel: "Software Master Interface",
-    keyFeatures: [
-      "Modern responsive design with smooth scroll animations",
-      "Services and portfolio showcase sections",
-      "Performance-optimized with TypeScript",
-      "Lead generation contact forms",
-      "SEO-optimized structure"
-    ],
-    techStack: ["TypeScript", "React", "Tailwind CSS", "Vite"],
-    useCases: [
-      "Software agencies showcasing their work",
-      "Tech consultancies building online presence"
-    ],
-    links: [
-      { label: "View on GitHub", url: "https://github.com/Eli0zak/software-master", icon: "fab fa-github" }
-    ]
-  }
-};
+// Central projects data — used by both the card grid and detail pages
+// Old projects preserved (minus pettouch) + 6 new projects added from content.template.json
+const projects = [
+
+    // ── OLD PROJECTS (kept as-is) ────────────────────────────────────────────
+
+    {
+        id: 'zoom-drive-automation',
+        category: 'automation',
+        icon: '⚡',
+        gallery: [
+            { src: '/images/projects/zoom/1771099978189.jpg' },
+            { src: '/images/projects/zoom/1771099957110.jpg' }
+        ],
+        titleEn: 'Zoom & Google Drive Automation System',
+        titleAr: 'نظام أتمتة Zoom و Google Drive',
+        subtitleEn: 'Infrastructure Automation Engineer',
+        subtitleAr: 'مهندس أتمتة البنية التحتية',
+        tagEn: 'Zapier + Google Drive',
+        tagAr: 'Zapier + Google Drive',
+        descEn: 'Built a full automation pipeline using Zapier Webhooks for dynamic ID recognition and automated file mapping to Google Drive folders for 22 Zoom accounts and 100+ groups.',
+        descAr: 'بناء مسار أتمتة متكامل باستخدام Zapier Webhooks للتعرف الديناميكي على المعرفات (IDs) ورفع ملفات التسجيل التلقائي لمجلدات Drive، لخدمة 22 حساب Zoom وأكثر من 100 مجموعة.',
+        challengeEn: 'Managing simultaneous session recordings across 22 Zoom accounts for over 100 active groups was a manual nightmare. Each recording needed to be manually downloaded, renamed, and uploaded to the correct Google Drive folder — a process that consumed hours of staff time daily and was prone to misfiling errors.',
+        challengeAr: 'كانت إدارة تسجيلات الجلسات المتزامنة عبر 22 حساب Zoom لأكثر من 100 مجموعة نشطة عملية يدوية مرهقة. كان يجب تنزيل كل تسجيل يدويًا وإعادة تسميته ورفعه إلى مجلد Google Drive الصحيح — وهي عملية كانت تستهلك ساعات عمل يوميًا وكانت عرضة لأخطاء التصنيف.',
+        solutionEn: 'Engineered a full automation pipeline using Zapier Webhooks. When a Zoom session ends, a webhook fires, the pipeline dynamically reads the meeting ID, maps it to the correct group folder in Google Drive, and automatically uploads the recording with a structured filename — all within seconds of the session ending.',
+        solutionAr: 'تصميم خط أنابيب أتمتة كامل باستخدام Zapier Webhooks. عند انتهاء جلسة Zoom، يُطلق Webhook، ويقرأ خط الأنابيب معرّف الاجتماع بشكل ديناميكي، ويربطه بمجلد المجموعة الصحيح في Google Drive، وينزّل التسجيل تلقائيًا باسم ملف منظم — وكل ذلك في غضون ثوانٍ من انتهاء الجلسة.',
+        impactEn: 'Eliminated 100% of wasted manual time and reduced human error to 0%. Staff recovered hours daily, accuracy became guaranteed, and the system scaled effortlessly as new groups were added.',
+        impactAr: 'القضاء على 100% من الوقت اليدوي الضائع وتقليص الخطأ البشري إلى 0%. استعاد الموظفون ساعات يوميًا، وأصبحت الدقة مضمونة، وتوسع النظام بسهولة مع إضافة مجموعات جديدة.',
+        techStack: ['Zapier', 'Webhooks', 'Google Drive API', 'Zoom API', 'JSON Mapping'],
+        metrics: [
+            { valueEn: '100%', labelEn: 'Manual Time Eliminated', labelAr: 'وقت يدوي تم إلغاؤه' },
+            { valueEn: '0%', labelEn: 'Human Error Rate', labelAr: 'معدل الخطأ البشري' },
+            { valueEn: '22', labelEn: 'Zoom Accounts Managed', labelAr: 'حساب Zoom مُدار' },
+            { valueEn: '100+', labelEn: 'Active Groups', labelAr: 'مجموعة نشطة' },
+        ],
+    },
+    {
+        id: 'odc-instant-event',
+        category: 'operations',
+        icon: '🚀',
+        gallery: [
+            { src: '/images/projects/odc/1769634210076.jpg' },
+            { src: '/images/projects/odc/1769634192793.jpg' },
+            { src: '/images/projects/odc/1769634208226.jpg' }
+        ],
+        titleEn: 'Orange Digital Center × Instant Event Operations',
+        titleAr: 'إدارة عمليات Orange Digital Center × Instant',
+        subtitleEn: 'Operations Team Leader',
+        subtitleAr: 'قائد فريق العمليات',
+        tagEn: 'Event Operations',
+        tagAr: 'إدارة الفعاليات',
+        descEn: 'Managed and coordinated the complex logistics of the joint Instant Event, ensuring participant success and a smooth educational experience from the first minute.',
+        descAr: 'إدارة وتنسيق العمليات اللوجستية المعقدة لضمان تفاعل المشاركين ونجاح الفعاليات المشتركة مع Instant Event من الدقيقة الأولى.',
+        challengeEn: 'Welcoming hundreds of students to a flagship tech event jointly organized between Orange Digital Center and Instant required precise operational coordination — from registration flows and space management to team briefings and real-time problem-solving during the event.',
+        challengeAr: 'استقبال مئات الطلاب في حدث تقني كبير منظم مشتركًا بين Orange Digital Center وInstant تطلب تنسيقًا تشغيليًا دقيقًا — من تدفقات التسجيل وإدارة المساحات إلى إحاطات الفريق وحل المشكلات في الوقت الفعلي خلال الفعالية.',
+        solutionEn: 'Led the operations team end-to-end: designed the student flow from arrival to seating, coordinated with venue staff, managed real-time incident response, and ensured every operational detail was covered before the first word was spoken on stage.',
+        solutionAr: 'قيادة فريق العمليات من البداية إلى النهاية: تصميم تدفق الطلاب من الوصول إلى الجلوس، والتنسيق مع طاقم الفعالية، وإدارة الاستجابة الفورية للحوادث، والتأكد من تغطية كل تفصيلة تشغيلية قبل أن تُقال أول كلمة على المسرح.',
+        impactEn: 'The event ran flawlessly. Students reported memorable first impressions, zero operational delays were recorded, and the collaboration set a benchmark for future joint events.',
+        impactAr: 'سارت الفعالية بشكل مثالي. أفاد الطلاب بانطباعات أولى لا تُنسى، ولم تُسجَّل أي تأخيرات تشغيلية، وأسس التعاون معيارًا للفعاليات المشتركة المستقبلية.',
+        techStack: ['Event Operations', 'Team Leadership', 'Logistics Planning', 'Real-time Coordination'],
+        metrics: [
+            { valueEn: '0', labelEn: 'Operational Delays', labelAr: 'تأخيرات تشغيلية' },
+            { valueEn: '100%', labelEn: 'On-time Execution', labelAr: 'تنفيذ في الوقت المحدد' },
+            { valueEn: '200+', labelEn: 'Students Welcomed', labelAr: 'طالب تم استقبالهم' },
+            { valueEn: '1', labelEn: 'Unified Operations Team', labelAr: 'فريق عمليات موحد' },
+        ],
+    },
+    {
+        id: 'whatsapp-crm',
+        category: 'systems',
+        icon: '🤖',
+        gallery: [
+            { src: '/images/projects/whatsapp/VN20260224_030240.mp4' }
+        ],
+        titleEn: 'WhatsApp Smart CRM Extension',
+        titleAr: 'امتداد CRM الذكي للواتساب',
+        subtitleEn: 'Custom CRM Developer',
+        subtitleAr: 'مطور CRM مخصص',
+        tagEn: 'CRM + Automation',
+        tagAr: 'CRM + أتمتة',
+        descEn: 'Built a custom WhatsApp CRM extension to bridge operational gaps in client management, enabling structured follow-ups and boosting client satisfaction.',
+        descAr: 'بناء امتداد CRM مخصص للواتساب لسد الفجوات التشغيلية في إدارة العملاء وتمكين المتابعة المنظمة وتعزيز رضا العملاء.',
+        challengeEn: 'Existing CRM tools failed to integrate naturally with WhatsApp — where most client communication actually happens. Sales and operations teams were losing leads due to untracked conversations and missed follow-ups.',
+        challengeAr: 'فشلت أدوات CRM الموجودة في الاندماج بشكل طبيعي مع واتساب — حيث تحدث معظم اتصالات العملاء فعليًا. كانت فرق المبيعات والعمليات تفقد عملاء محتملين بسبب المحادثات غير المتتبعة والمتابعات الفائتة.',
+        solutionEn: 'Built a browser extension that overlays CRM capabilities directly onto WhatsApp Web: one-click lead tagging, follow-up reminders, conversation status tracking, and pipeline stage updates — all without leaving the chat.',
+        solutionAr: 'بناء امتداد متصفح يضيف إمكانيات CRM مباشرة على واتساب ويب: وضع علامات على العملاء المحتملين بنقرة واحدة، وتذكيرات المتابعة، وتتبع حالة المحادثات، وتحديثات مراحل خط الأنابيب — كل ذلك دون مغادرة الدردشة.',
+        impactEn: 'Reduced lead loss rate significantly, improved team accountability, and created a seamless client management layer on top of the most-used communication tool.',
+        impactAr: 'انخفاض ملحوظ في معدل فقدان العملاء المحتملين، وتحسين مساءلة الفريق، وإنشاء طبقة سلسة لإدارة العملاء فوق أداة التواصل الأكثر استخدامًا.',
+        techStack: ['JavaScript', 'Browser Extension API', 'WhatsApp Web', 'Local Storage', 'CRM Logic'],
+        metrics: [
+            { valueEn: '↓60%', labelEn: 'Lead Loss Rate', labelAr: 'معدل فقدان العملاء' },
+            { valueEn: '100%', labelEn: 'Conversation Tracking', labelAr: 'تتبع المحادثات' },
+            { valueEn: '0', labelEn: 'Tool Switching Required', labelAr: 'تبديل الأدوات مطلوب' },
+            { valueEn: '∞', labelEn: 'Scalable Contacts', labelAr: 'جهات اتصال قابلة للتوسع' },
+        ],
+    },
+
+    // ── NEW PROJECTS (from content.template.json) ────────────────────────────
+
+    {
+        id: 'clc-legal-academy',
+        category: 'development',
+        icon: '⚖️',
+        gallery: [
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054325.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054335.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054457.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 053944.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054347.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054606.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054615.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 055242.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054531.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054357.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054415.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054509.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054428.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054551.png' },
+            { src: '/images/projects/clc/Screenshot 2026-03-09 054439.png' }
+        ],
+        titleEn: 'CLC Legal Academy Platform',
+        titleAr: 'منصة أكاديمية CLC القانونية',
+        subtitleEn: 'Vibe Coder & UX Architecture',
+        subtitleAr: 'تطوير شامل وهندسة تجربة المستخدم',
+        tagEn: 'L&D E-Learning & CRM',
+        tagAr: 'منصة تعليم قانوني وإدارة عملاء',
+        descEn: 'A premium L&D platform featuring a recommendation quiz, certificate verification, and seamless CRM integration for lead tracking.',
+        descAr: 'منصة تعليمية راقية بتتميز بنظام ذكي لترشيح المسارات، أداة للتحقق من الشهادات، وربط كامل بنظام CRM لتتبع العملاء (Leads).',
+        challengeEn: "The academy needed an authoritative digital presence to guide students through course selection and a robust backend to manage leads and verify credentials.",
+        challengeAr: 'الأكاديمية كانت محتاجة منصة توجه الطالب للمسار التدريبي المناسب، ونظام خلفي (Backend) قوي لإدارة بيانات العملاء المحتملين (Leads) والتحقق من الشهادات.',
+        solutionEn: 'Developed an interactive platform powered by Supabase. Integrated a custom CRM for lead tracking and built a reliable certificate verification portal to validate alumni.',
+        solutionAr: 'بنيت منصة تفاعلية باستخدام قاعدة بيانات Supabase. طورت أداة للتحقق من الشهادات (Verification)، وربطت المنصة بنظام إدارة عملاء (CRM) لتتبع مسار الـ Leads بدقة.',
+        impactEn: 'Delivered a trusted educational environment that improves user onboarding through smart recommendations and streamlines sales operations via the CRM pipeline.',
+        impactAr: 'النتيجة منصة موثوقة بتسهل رحلة الطالب من خلال الترشيحات الذكية، وبترفع كفاءة فريق المبيعات من خلال تنظيم بيانات العملاء في الـ CRM.',
+        techStack: ['React / Next.js', 'Supabase', 'CRM Integration', 'Interactive Logic'],
+        metrics: [
+            { valueEn: 'Smart', labelEn: 'CRM Lead Tracking', labelAr: 'تتبع ذكي للعملاء' },
+            { valueEn: 'Secure', labelEn: 'Certificate Verification', labelAr: 'تحقق آمن من الشهادات' },
+        ],
+    },
+    {
+        id: 'barah-sales-crm',
+        category: 'systems',
+        icon: '📊',
+        gallery: [
+            { src: '/images/projects/barah/Screenshot 2026-03-09 062149.png' },
+            { src: '/images/projects/barah/Screenshot 2026-03-09 062209.png' },
+            { src: '/images/projects/barah/Screenshot 2026-03-09 062219.png' },
+            { src: '/images/projects/barah/Screenshot 2026-03-09 062227.png' },
+            { src: '/images/projects/barah/Screenshot 2026-03-09 062239.png' },
+            { src: '/images/projects/barah/Screenshot 2026-03-09 062253.png' },
+            { src: '/images/projects/barah/Screenshot 2026-03-09 062305.png' }
+        ],
+        titleEn: 'Barah Sales Management System',
+        titleAr: 'نظام إدارة المبيعات - براح',
+        subtitleEn: 'System Architect',
+        subtitleAr: 'مهندس النظام',
+        tagEn: 'Custom SaaS / CRM',
+        tagAr: 'نظام مبيعات مخصص',
+        descEn: 'A centralized, Arabic-first CRM utilizing Supabase to manage deal pipelines, track tasks, and monitor sales team performance.',
+        descAr: 'نظام متكامل لإدارة المبيعات مبني على Supabase، مصمم لتركيز بيانات العملاء، إدارة مسار الصفقات، وتتبع أداء فريق المبيعات.',
+        challengeEn: 'The company struggled with scattered data and lacked real-time visibility into the sales pipeline, overdue tasks, and representative performance.',
+        challengeAr: 'الشركة كانت بتعاني من تشتت البيانات وغياب الرؤية اللحظية لحالة الصفقات، المهام المتأخرة، وأداء كل مندوب مبيعات.',
+        solutionEn: 'Engineered a custom CRM backed by Supabase with strict Role-Based Access Control (RBAC). Built modules for task tracking, deal management, and daily reporting.',
+        solutionAr: 'طورت نظام CRM متكامل باستخدام قاعدة بيانات Supabase مع هيكل صلاحيات دقيق (RBAC). برمجت وحدات لتتبع المهام، إدارة الصفقات، وإصدار التقارير.',
+        impactEn: 'Created a centralized operational hub that enhanced team accountability, secured client data, and provided clear dashboards for rapid decision-making.',
+        impactAr: 'النتيجة بيئة عمل تشغيلية مركزية رفعت من إنتاجية الفريق، أمنت بيانات العملاء، ووفرت تقارير واضحة لدعم قرارات البيع.',
+        techStack: ['React / Next.js', 'Supabase', 'Role-Based Access (RBAC)', 'Dashboard Analytics'],
+        metrics: [
+            { valueEn: 'RBAC', labelEn: 'Multi-Level Access', labelAr: 'صلاحيات متعددة' },
+            { valueEn: '100%', labelEn: 'Data Centralization', labelAr: 'مركزية البيانات' },
+        ],
+    },
+    {
+        id: 'software-masters-academy',
+        category: 'development',
+        icon: '💻',
+        gallery: [
+            { src: '/images/projects/software-master/Screenshot 2026-03-09 053738.png' },
+            { src: '/images/projects/software-master/Screenshot 2026-03-09 053850.png' },
+            { src: '/images/projects/software-master/Screenshot 2026-03-09 053906.png' },
+            { src: '/images/projects/software-master/Screenshot 2026-03-09 053918.png' },
+            { src: '/images/projects/software-master/Screenshot 2026-03-09 053932.png' },
+            { src: '/images/projects/software-master/Screenshot 2026-03-09 054002.png' },
+            { src: '/images/projects/software-master/Screenshot 2026-03-09 054022.png' },
+            { src: '/images/projects/software-master/Screenshot 2026-03-09 054039.png' }
+        ],
+        titleEn: "Software Master's Platform",
+        titleAr: "منصة أكاديمية Software Master's",
+        subtitleEn: 'Vibe Coder & UI/UX',
+        subtitleAr: 'مطور واجهات وتجربة المستخدم',
+        tagEn: 'EdTech Template',
+        tagAr: 'نموذج منصة تعليمية',
+        descEn: 'A modern, responsive e-learning template designed to showcase tech diplomas with a seamless WhatsApp-integrated booking flow.',
+        descAr: 'نموذج عصري لمنصة تعليمية، متصمم لعرض الدبلومات التقنية مع نظام حجز ذكي وسلس مربوط بالواتساب.',
+        challengeEn: 'Conceptualizing a high-quality L&D interface that balances a tech-focused aesthetic with straightforward, frictionless student registration.',
+        challengeAr: 'الهدف كان تصميم واجهة تعليمية بتوازن بين الشكل التكنولوجي الجذاب وسهولة الاستخدام عشان الطالب يحجز بدون تشتت.',
+        solutionEn: 'Developed a fully responsive web app utilizing modern design principles and a smart registration process routing directly to WhatsApp.',
+        solutionAr: 'طورت ويب أبلكيشن متجاوب بالكامل وعملت نظام تسجيل بياخد بيانات الطالب ويحوله فوراً على الواتساب لتأكيد العملية بسهولة.',
+        impactEn: 'Delivered a clean template demonstrating efficient user flows and a strong understanding of conversion-focused educational design.',
+        impactAr: 'النتيجة نموذج احترافي بيعكس تصميم مسارات مستخدم (User Flows) واضحة ومباشرة تركز على زيادة معدلات التحويل (Conversion).',
+        techStack: ['React / Next.js', 'Modern UI/UX', 'Form Integration'],
+        metrics: [
+            { valueEn: 'Smart', labelEn: 'User Flow', labelAr: 'مسار مستخدم ذكي' },
+        ],
+    },
+    {
+        id: 'edc-center-platform',
+        category: 'development',
+        icon: '🌍',
+        gallery: [
+            { src: '/images/projects/edc/Screenshot 2026-03-09 055434.png' },
+            { src: '/images/projects/edc/Screenshot 2026-03-09 055447.png' },
+            { src: '/images/projects/edc/Screenshot 2026-03-09 055459.png' },
+            { src: '/images/projects/edc/Screenshot 2026-03-09 055514.png' },
+            { src: '/images/projects/edc/Screenshot 2026-03-09 055523.png' },
+            { src: '/images/projects/edc/Screenshot 2026-03-09 055538.png' }
+        ],
+        titleEn: 'EDC Center Educational Platform',
+        titleAr: 'منصة مركز EDC التعليمي',
+        subtitleEn: 'Vibe Coder',
+        subtitleAr: 'مطور بأسلوب Vibe Coder',
+        tagEn: 'Language L&D App',
+        tagAr: 'منصة تعليم لغات',
+        descEn: 'A vibrant L&D website utilizing Supabase for an English language center, featuring clear course pathways and dynamic theming.',
+        descAr: 'واجهة رقمية تفاعلية مدعومة بقاعدة بيانات Supabase لمركز تعليم لغات، بتعرض مسارات التعلم بشكل جذاب ومقسم بالألوان.',
+        challengeEn: 'The center needed a digital storefront to clearly categorize diverse English programs and encourage student exploration without cognitive overload.',
+        challengeAr: 'المركز كان محتاج واجهة تصنف البرامج المختلفة بشكل يسهل على الزائر اختيار الكورس المناسب من غير ما يحس بتشتت.',
+        solutionEn: 'Designed a clean interface with color-coded course cards, integrated a robust Supabase backend, and implemented a Dark/Light toggle.',
+        solutionAr: 'صممت واجهة مقسمة بألوان مميزة لكل كورس، وربطتها بقاعدة بيانات Supabase، مع إضافة وضع ليلي/نهاري لتجربة تصفح مريحة.',
+        impactEn: 'Delivered a highly engaging platform that communicates value effectively and streamlines the discovery phase for students.',
+        impactAr: 'النتيجة منصة سريعة التجاوب بتخلي رحلة الطالب من أول استكشاف الكورسات لحد التسجيل بسيطة ومباشرة.',
+        techStack: ['React / Next.js', 'Supabase', 'Dynamic Theming'],
+        metrics: [
+            { valueEn: 'Smart', labelEn: 'Color-Coded UI', labelAr: 'تصنيف لوني ذكي' },
+        ],
+    },
+    {
+        id: 'qualifiders-consulting',
+        category: 'development',
+        icon: '🏢',
+        gallery: [
+            { src: '/images/projects/qualifiders/Screenshot 2025-10-22 152644.png' },
+            { src: '/images/projects/qualifiders/Screenshot 2025-10-23 161852.png' },
+            { src: '/images/projects/qualifiders/Screenshot 2025-10-23 161909.png' },
+            { src: '/images/projects/qualifiders/Screenshot 2025-10-23 161926.png' },
+            { src: '/images/projects/qualifiders/Screenshot 2025-10-23 161947.png' },
+            { src: '/images/projects/qualifiders/Screenshot 2025-10-23 162003.png' }
+        ],
+        titleEn: 'QUALIFIDERS Consulting Platform',
+        titleAr: 'موقع شركة كواليفايدرز للاستشارات',
+        subtitleEn: 'WordPress Architecture & Development',
+        subtitleAr: 'تطوير وهندسة الموقع باستخدام WordPress',
+        tagEn: 'Corporate Solutions',
+        tagAr: 'مؤسسة استشارات مالية',
+        descEn: 'A highly professional corporate website developed fully on WordPress for a financial and administrative consulting firm.',
+        descAr: 'واجهة رقمية احترافية مبنية بالكامل على WordPress لشركة استشارات مالية وإدارية، لتعكس هوية الشركة وموثوقيتها.',
+        challengeEn: 'The firm required a dignified digital presence to establish trust with enterprise clients and articulate complex B2B services clearly.',
+        challengeAr: 'الشركة كانت محتاجة واجهة تعكس ثقلها في سوق الاستشارات، وتبني ثقة مع الشركات وتعرض خدماتها المعقدة بشكل مبسط ومنظم.',
+        solutionEn: 'Built a scalable WordPress CMS architecture to logically highlight their unique methodology, leadership expertise, and core B2B services.',
+        solutionAr: 'بنيت نظام إدارة محتوى متكامل (CMS) باستخدام WordPress، وركزت على هيكلة الموقع عشان نبرز منهجية الشركة والخدمات بمسار تصفح مريح.',
+        impactEn: 'Delivered an impactful corporate interface that communicates credibility and serves as a strong foundation for high-ticket lead generation.',
+        impactAr: 'موقع رسمي بيعكس مصداقية الشركة بقوة وبيبني صورة ذهنية احترافية بتساعد في جذب شركاء وعملاء بحجم كبير.',
+        techStack: ['WordPress CMS', 'Content Architecture', 'B2B Design Patterns'],
+        metrics: [
+            { valueEn: 'MENA', labelEn: 'Market Focus', labelAr: 'موجه للسوق الإقليمي' },
+        ],
+    },
+];
+
+export default projects;

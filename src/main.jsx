@@ -1,23 +1,24 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { ModeProvider } from './context/ModeContext'
-// Initialize AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './i18n.js';
+import './index.css';
+import { useTranslation } from 'react-i18next';
 
-AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
-    offset: 100
-});
+function Root() {
+    const { i18n } = useTranslation();
+
+    useEffect(() => {
+        const lang = i18n.language;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        document.documentElement.lang = lang;
+    }, [i18n.language]);
+
+    return <App />;
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <ModeProvider>
-            <App />
-        </ModeProvider>
+        <Root />
     </React.StrictMode>,
-)
+);

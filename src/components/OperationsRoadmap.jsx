@@ -4,81 +4,14 @@ import { useMode } from '../context/ModeContext';
 const OperationsRoadmap = () => {
     const { mode } = useMode();
 
-    if (mode === 'tech') return null;
+    // If in tech mode, this section might be hidden or styled differently. 
+    // Based on original code: class "business-mode-content" implies it's for business mode.
+    // We can hide it entirely in Tech mode if desired, or keep it visible.
+    // The original JS didn't seem to hide the entire section, just swapped roles in the hero.
+    // However, I'll follow the logical separation. Let's keep it visible but maybe less emphasized, 
+    // or hide it if strictly following "Mode" concept.
 
-    const timeline = [
-        {
-            date: 'Dec 2025 — Present',
-            title: 'Senior Operations Specialist',
-            company: 'Instant Software Solutions',
-            location: 'Dokki, Cairo · On-site',
-            type: 'Full-time',
-            achievements: [
-                'Managing operations for 100+ active student groups across 22 Zoom accounts',
-                'Built and deployed IOMS — a full Institute Operations Management System from scratch',
-                'Automated Zoom recording pipeline via Zapier saving 2+ hours daily per team member',
-                'Built WhatsApp CRM Chrome Extension reducing customer lookup time from 2min to 0sec',
-                'Led logistics and student onboarding for Instant x Orange Digital Center 2026 event',
-                'Process optimization, workflow management, and cross-functional team leadership',
-            ],
-            kpi: [
-                { label: 'Automation Rate', value: 100 },
-                { label: 'Error Reduction', value: 95 },
-                { label: 'Time Saved', value: 80 },
-            ],
-        },
-        {
-            date: 'Sep 2025 — Nov 2025',
-            title: 'Project Manager',
-            company: 'QUALIFIDERS',
-            location: 'Cairo, Egypt · Hybrid',
-            type: 'Full-time',
-            achievements: [
-                'Managed new business development and consulting projects',
-                'Coordinated cross-functional teams across multiple client engagements',
-                'Developed project roadmaps and ensured on-time delivery',
-                'Built client relationships and managed project pipelines',
-            ],
-        },
-        {
-            date: 'Jul 2024 — Oct 2025',
-            title: 'Sales Manager',
-            company: 'Barah Co-working Space',
-            location: 'Giza, Egypt · On-site',
-            type: 'Full-time',
-            achievements: [
-                'Led the sales team and drove company growth objectives',
-                'Developed sales strategies and built long-term client relationships',
-                'Analyzed market performance to enhance processes and boost revenue',
-                'Trained and motivated sales team to achieve peak performance',
-                'Managed full sales process from initial contact to closing deals',
-            ],
-        },
-        {
-            date: 'Jan 2025 — May 2025',
-            title: 'Sales Specialist',
-            company: 'Optical Soft',
-            location: 'Cairo, Egypt',
-            type: 'Part-time',
-            achievements: [
-                'Software solution sales to business clients',
-                'Client needs analysis and solution presentation',
-            ],
-        },
-        {
-            date: 'Jan 2024 — Mar 2024',
-            title: 'Customer Service Representative',
-            company: 'Teleperformance (Orange Egypt)',
-            location: 'New Cairo, Egypt · On-site',
-            type: 'Full-time',
-            achievements: [
-                'Consistently ranked among top performers for 2 consecutive months',
-                'Efficiently handled customer inquiries and technical issues',
-                'Maintained high professionalism and customer satisfaction scores',
-                'Collaborated with teams for efficient issue resolution',
-            ],
-        },
-    ];
+    if (mode === 'tech') return null;
 
     return (
         <section id="operations-roadmap" className="operations-roadmap business-mode-content">
@@ -88,14 +21,125 @@ const OperationsRoadmap = () => {
                         <span className="title-icon">📊</span>
                         OPERATIONS ROADMAP
                     </h2>
-                    <p className="section-subtitle">The Journey of Integration — Experience & Impact</p>
+                    <p className="section-subtitle">The Journey of Integration</p>
                 </div>
 
                 <div className="timeline-container">
                     <div className="timeline-line"></div>
-                    {timeline.map((item, i) => (
-                        <TimelineItem key={i} {...item} delay={i * 100} />
-                    ))}
+
+                    <TimelineItem
+                        date="Dec 2025 - Present"
+                        title="Senior Operations Specialist"
+                        company="Instant Software Solutions"
+                        location="Dokki"
+                        delay="0"
+                        achievements={[
+                            "Process Optimization & Workflow Management",
+                            "Cross-functional Team Leadership",
+                            "Performance Analytics & Reporting"
+                        ]}
+                    />
+
+                    <TimelineItem
+                        date="Sep 2025 - Nov 2025"
+                        title="Project Manager"
+                        company="QUALIFIDERS"
+                        location="Cairo, Egypt (Hybrid)"
+                        delay="50"
+                        achievements={[
+                            "New Business Development",
+                            "Project Planning & Execution",
+                            "Team Coordination & Resource Management",
+                            "Quality Assurance & Delivery"
+                        ]}
+                    />
+
+                    <TimelineItem
+                        date="Nov 2024 - Oct 2025"
+                        title="Sales Manager"
+                        company="Barah Co-working Space"
+                        location="Giza, Al Jizah, Egypt"
+                        delay="100"
+                        achievements={[
+                            "Leading sales team and driving company growth objectives",
+                            "Developing sales strategies & building long-term client relationships",
+                            "Training and motivating the sales team to achieve peak performance",
+                            "Managing sales process from initial contact to closing deals",
+                            "Analyzing market and competitors to develop innovative solutions"
+                        ]}
+                        kpi={[
+                            { label: "Team Leadership", value: 90 },
+                            { label: "Client Satisfaction", value: 92 }
+                        ]}
+                    />
+
+                    <TimelineItem
+                        date="Sep 2024 - Nov 2024"
+                        title="Booking Coordinator"
+                        company="Barah Co-working Space"
+                        location="Giza, Al Jizah, Egypt"
+                        type="Part-time"
+                        delay="150"
+                        achievements={[
+                            "Problem Solving & Decision-Making",
+                            "Booking Management & Coordination",
+                            "Client Communication & Support"
+                        ]}
+                    />
+
+                    <TimelineItem
+                        date="Jul 2024 - Nov 2024"
+                        title="Sales Specialist"
+                        company="Barah Co-working Space"
+                        location="Al Jizah, Egypt"
+                        delay="200"
+                        achievements={[
+                            "Sales & Sales Processes",
+                            "Client Acquisition & Relationship Building",
+                            "Revenue Generation"
+                        ]}
+                    />
+
+                    <TimelineItem
+                        date="Jan 2024 - May 2024"
+                        title="Sales Specialist"
+                        company="Optical Soft"
+                        type="Part-time"
+                        delay="250"
+                        achievements={[
+                            "Sales Operations",
+                            "Product Knowledge & Consultation",
+                            "Customer Service Excellence"
+                        ]}
+                    />
+
+                    <TimelineItem
+                        date="Jan 2024 - Mar 2024"
+                        title="Customer Service Representative"
+                        company="Teleperformance - Orange Egypt"
+                        location="New Cairo, Cairo, Egypt"
+                        delay="300"
+                        achievements={[
+                            "Consistently ranked among top performers for two months",
+                            "Efficiently handled customer inquiries and issues",
+                            "Maintained professionalism and empathy",
+                            "Collaborated with teams for issue resolution"
+                        ]}
+                    />
+
+                    <TimelineItem
+                        date="Jun 2023 - Oct 2023"
+                        title="Customer Service Representative"
+                        company="Americana Group"
+                        location="Egypt"
+                        delay="350"
+                        achievements={[
+                            "Foundation in Customer Operations",
+                            "Telephone Reception & Customer Support",
+                            "Client Services & Team Collaboration"
+                        ]}
+                    />
+
                 </div>
             </div>
         </section>
@@ -104,29 +148,38 @@ const OperationsRoadmap = () => {
 
 const TimelineItem = ({ date, title, company, location, type, achievements, kpi, delay }) => {
     return (
-        <div className="timeline-item" style={{ animationDelay: `${delay}ms` }}>
-            <div className="timeline-dot"></div>
-            <div className="timeline-content">
-                <span className="timeline-date">{date}</span>
-                <h3 className="timeline-title">{title}</h3>
-                <span className="timeline-company">{company}</span>
-                {location && <span className="timeline-location">{location}</span>}
-                {type && <span className="timeline-type">{type}</span>}
-                <ul className="timeline-achievements">
-                    {achievements.map((item, index) => (
-                        <li key={index}>{item}</li>
-                    ))}
-                </ul>
-                {kpi && (
-                    <div className="kpi-grid">
-                        {kpi.map((item, index) => (
-                            <div key={index} className="kpi-item">
-                                <span className="kpi-label">{item.label}</span>
-                                <span className="kpi-value">{item.value}%</span>
-                            </div>
+        <div className="timeline-item" data-aos="fade-up" data-aos-delay={delay}>
+            <div className="timeline-marker">
+                <div className="marker-dot"></div>
+                <div className="marker-date">{date}</div>
+            </div>
+            <div className="timeline-card">
+                <div className="card-header-timeline">
+                    <h3>{title}</h3>
+                    <span className="company">{company}</span>
+                </div>
+                <div className="card-body">
+                    {location && <p className="location"><i className="fas fa-map-marker-alt"></i> {location}</p>}
+                    {type && <p className="employment-type"><i className="fas fa-clock"></i> {type}</p>}
+                    <ul className="achievements">
+                        {achievements.map((item, index) => (
+                            <li key={index}><i className="fas fa-check-circle"></i> {item}</li>
                         ))}
-                    </div>
-                )}
+                    </ul>
+                    {kpi && (
+                        <div className="kpi-display">
+                            {kpi.map((item, index) => (
+                                <div className="kpi-item" key={index}>
+                                    <span className="kpi-label">{item.label}</span>
+                                    <div className="kpi-bar">
+                                        <div className="kpi-fill" style={{ width: `${item.value}%` }}></div>
+                                    </div>
+                                    <span className="kpi-value">{item.value}%</span>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );

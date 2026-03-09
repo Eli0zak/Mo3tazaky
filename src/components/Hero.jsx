@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useMode } from '../context/ModeContext';
 
-import aboutImg from '../../img/about-img1.png';
+const aboutImg = '/img/about-img1.png';
 
 const Hero = () => {
     const { mode } = useMode();
@@ -24,20 +24,6 @@ const Hero = () => {
         document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     };
 
-    const stats = [
-        { value: '3+', label: 'Years Exp' },
-        { value: '7+', label: 'Projects Built' },
-        { value: '5+', label: 'Certifications' },
-        { value: '100+', label: 'Groups Managed' },
-    ];
-
-    const badges = [
-        { icon: 'fas fa-shield-alt', text: 'Cybersecurity' },
-        { icon: 'fas fa-network-wired', text: 'CCNA' },
-        { icon: 'fas fa-cogs', text: 'Operations' },
-        { icon: 'fas fa-bolt', text: 'Automation' },
-    ];
-
     return (
         <section id="command-center" className="command-center">
             <div
@@ -54,71 +40,99 @@ const Hero = () => {
             </div>
 
             <div className="center-content">
-                <div className="identity-card">
+                <div className="identity-card glass-card">
                     <div className="card-header">
-                        <span className="status-indicator">ACTIVE</span>
-                        <span className="op-id">OP-2026</span>
-                    </div>
-
-                    <div className="profile-section">
-                        <div className="profile-img-container">
-                            <img src={aboutImg} alt="Moataz Zaky Profile Photo" className="profile-img" />
+                        <div className="status-indicator">
+                            <span className="status-dot"></span>
+                            <span className="status-text">ACTIVE</span>
                         </div>
-                        <div className="profile-info">
-                            <h2 className="name-display">MOATAZ ZAKY</h2>
-                            <p className="title-display">Senior Operations @ INSTANT SOFTWARE SOLUTIONS</p>
-                            <div className="role-tags">
-                                <span className="role-tag">Operations Specialist</span>
-                                <span className="role-tag">Full-Stack Developer</span>
-                                <span className="role-tag">Cybersecurity Student</span>
-                            </div>
+                        <div className="operator-id">OP-2026</div>
+                    </div>
+
+                    <div className="profile-photo-container">
+                        <img src={aboutImg} alt="Moataz Zaky Profile Photo" className="profile-photo" />
+                    </div>
+
+                    <h2 className="operator-name">MOATAZ ZAKY</h2>
+                    <p className="operator-title">Senior Operations @ INSTANT SOFTWARE SOLUTIONS</p>
+
+                    <div className="role-display" id="roleDisplay">
+                        <span
+                            className={`role-text business-mode ${mode === 'tech' ? 'hidden' : ''}`}
+                            style={{ display: mode === 'tech' ? 'none' : 'block' }}
+                        >
+                            New Business Development | Account Management
+                        </span>
+                        <span
+                            className={`role-text tech-mode ${mode === 'business' ? 'hidden' : ''}`}
+                            style={{ display: mode === 'business' ? 'none' : 'block' }}
+                        >
+                            Cybersecurity Student | CCNA
+                        </span>
+                    </div>
+
+                    <div className="quick-stats">
+                        <div className="stat-item">
+                            <i className="fas fa-briefcase"></i>
+                            <span className="stat-value">5+</span>
+                            <span className="stat-label">Years Exp</span>
+                        </div>
+                        <div className="stat-item">
+                            <i className="fas fa-certificate"></i>
+                            <span className="stat-value">5+</span>
+                            <span className="stat-label">Certifications</span>
+                        </div>
+                        <div className="stat-item">
+                            <i className="fas fa-code"></i>
+                            <span className="stat-value">10+</span>
+                            <span className="stat-label">Projects</span>
                         </div>
                     </div>
 
-                    <div className="badges-row">
-                        {badges.map((badge, i) => (
-                            <div key={i} className="badge-item">
-                                <i className={badge.icon}></i>
-                                <span>{badge.text}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="stats-grid">
-                        {stats.map((stat, i) => (
-                            <div key={i} className="stat-item">
-                                <span className="stat-value">{stat.value}</span>
-                                <span className="stat-label">{stat.label}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="card-actions">
-                        <button className="btn-primary" onClick={scrollToContact}>
-                            <i className="fas fa-terminal"></i> INITIATE CONTACT
-                        </button>
-                        <a
+                    <div className="social-matrix">
+                        <SocialLink
                             href="https://www.linkedin.com/in/moatazaky/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-secondary"
-                        >
-                            <i className="fab fa-linkedin"></i> LINKEDIN
-                        </a>
-                        <a
-                            href="https://github.com/Eli0zak"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-secondary"
-                        >
-                            <i className="fab fa-github"></i> GITHUB
-                        </a>
+                            icon="fab fa-linkedin"
+                            tooltip="LinkedIn"
+                            visible={mode === 'business' || mode === 'both'}
+                        />
+                        <SocialLink
+                            href="https://github.com/eli0zak"
+                            icon="fab fa-github"
+                            tooltip="GitHub"
+                            visible={mode === 'tech'}
+                        />
+                        <SocialLink
+                            href="https://www.instagram.com/mo3tazaky/"
+                            icon="fab fa-instagram"
+                            tooltip="Instagram"
+                            visible={mode === 'business'}
+                        />
+                        <SocialLink
+                            href="https://twitter.com/mo3tazaky"
+                            icon="fab fa-x-twitter"
+                            tooltip="X (Twitter)"
+                            visible={true} // 'both'
+                        />
+                        <SocialLink
+                            href="https://tryhackme.com/p/mo3tazaky"
+                            icon="fas fa-flag"
+                            tooltip="TryHackMe"
+                            visible={mode === 'tech'}
+                        />
                     </div>
 
-                    <div className="scroll-indicator">
-                        <i className="fas fa-chevron-down"></i>
-                        <span>SCROLL TO EXPLORE</span>
+                    <button className="cta-button" onClick={scrollToContact}>
+                        <span>INITIATE CONTACT</span>
+                        <i className="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div className="scroll-indicator">
+                    <div className="mouse">
+                        <div className="wheel"></div>
                     </div>
+                    <span>SCROLL TO EXPLORE</span>
                 </div>
             </div>
         </section>
@@ -132,6 +146,7 @@ const SocialLink = ({ href, icon, tooltip, visible }) => {
     useEffect(() => {
         if (visible) {
             setDisplay('flex');
+            // Small delay to allow display to apply before opacity transition
             setTimeout(() => setOpacity(1), 50);
         } else {
             setOpacity(0);
@@ -143,9 +158,10 @@ const SocialLink = ({ href, icon, tooltip, visible }) => {
         <a
             href={href}
             target="_blank"
-            rel="noopener noreferrer"
-            title={tooltip}
-            style={{ opacity, display, transition: 'opacity 0.3s ease' }}
+            rel="noreferrer"
+            className="social-link"
+            data-tooltip={tooltip}
+            style={{ display, opacity, transition: 'opacity 0.3s ease' }}
         >
             <i className={icon}></i>
         </a>
