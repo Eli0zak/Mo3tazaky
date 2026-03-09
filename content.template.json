@@ -1,0 +1,585 @@
+{
+    "_instructions": {
+        "ar": "اكتب قيمة كل حاجه بعد علامة : — الحقول اللي عليها /* صورة */ حط فيها اسم الصورة زي 'my-photo.jpg' وحطها في مجلد public/images",
+        "en": "Fill every value after the colon. Fields marked /* image */ take a filename like 'photo.jpg' — place images in the public/images folder"
+    },
+    "hero": {
+        "name": {
+            "en": "Moataz Zaky",
+            "ar": "معتز زكي"
+        },
+        "photo": "/* image */ public/images/profile.jpg",
+        "status_badge": {
+            "en": "SYSTEM ONLINE",
+            "ar": "النظام يعمل"
+        },
+        "operator_id": {
+            "en": "OPERATOR-001",
+            "ar": "المشغل-٠٠١"
+        },
+        "bio": {
+            "en": "A strategic Vibe Coder and Integrated Operator specializing in the Learning & Development (L&D) sector. I leverage advanced AI tools (Cursor, Claude, Gemini) to architect smart solutions and streamline complex business operations.",
+            "ar": "مطور بأسلوب Vibe Coder ومشغل متكامل (Integrated Operator) متخصص في إيجاد حلول ذكية لقطاع التدريب والتطوير (L&D). بعتمد على أدوات الذكاء الاصطناعي زي Cursor و Claude و Gemini عشان أبني أنظمة متطورة وأبسط العمليات التشغيلية للشركات."
+        },
+        "titles": {
+            "_note": "هتتناوب جوه الـ Typewriter — حط من 3 لـ 5 عناوين",
+            "list_en": [
+                "Senior Operations Specialist",
+                "Integrated Operator",
+                "Vibe Coder",
+                "L&D Solutions Architect"
+            ],
+            "list_ar": [
+                "أخصائي عمليات أول",
+                "المشغل المتكامل",
+                "Vibe Coder",
+                "مهندس حلول التدريب والتطوير"
+            ]
+        },
+        "cta_button": {
+            "en": "Explore My Work",
+            "ar": "استكشف أعمالي"
+        },
+        "stats": [
+            {
+                "value": "100",
+                "suffix": "%",
+                "label_en": "AI-Driven Output",
+                "label_ar": "إنتاجية بالذكاء الاصطناعي"
+            },
+            {
+                "value": "3",
+                "suffix": "+",
+                "label_en": "Years Experience",
+                "label_ar": "سنوات خبرة"
+            },
+            {
+                "value": "∞",
+                "suffix": "",
+                "label_en": "Solutions Architected",
+                "label_ar": "حلول تم هندستها"
+            }
+        ]
+    },
+    "projects": {
+        "_note": "أضف أو احذف كروت — كل كارد بيظهر في الگريد وله صفحة تفصيلية",
+        "list": [
+            {
+                "id": "zoom-drive-automation",
+                "icon": "⚡",
+                "category": "operations",
+                "title": {
+                    "en": "Zoom & Google Drive Automation System",
+                    "ar": "نظام أتمتة Zoom و Google Drive"
+                },
+                "subtitle": {
+                    "en": "Integrated Operator",
+                    "ar": "المشغل المتكامل"
+                },
+                "tag": {
+                    "en": "L&D Automation",
+                    "ar": "أتمتة التدريب والتطوير"
+                },
+                "desc": {
+                    "en": "A full-scale automation pipeline built to transfer session recordings from multiple Zoom accounts directly to Google Drive, optimizing L&D operations.",
+                    "ar": "نظام أتمتة متكامل لنقل تسجيلات المحاضرات من حسابات Zoom متعددة لـ Google Drive تلقائياً، لتسهيل عمليات التدريب والتطوير (L&D)."
+                },
+                "gallery": [
+                    {
+                        "src": "/* image */ public/images/projects/zoom-1.png",
+                        "caption": {
+                            "en": "Workflow Architecture",
+                            "ar": "هيكلة مسار العمل"
+                        }
+                    }
+                ],
+                "challenge": {
+                    "en": "The academy's operational team was losing countless hours manually downloading and organizing session recordings from 22 different Zoom accounts.",
+                    "ar": "فريق التشغيل في الأكاديمية كان بيضيع ساعات طويلة يومياً في تحميل وتنظيم تسجيلات المحاضرات بشكل يدوي من 22 حساب Zoom مختلف."
+                },
+                "solution": {
+                    "en": "Engineered a robust, zero-touch automation pipeline using webhooks and APIs to instantly process, rename, and route recordings to their designated Drive folders.",
+                    "ar": "بنيت مسار أتمتة كامل بيعتمد على الـ Webhooks والـ APIs عشان يستقبل التسجيلات، يعيد تسميتها، ويوجهها لفولدرات Drive المخصصة بدون أي تدخل بشري."
+                },
+                "impact": {
+                    "en": "Completely eliminated manual transfer time, reduced human error to zero, and drastically improved content delivery speed for students.",
+                    "ar": "إلغاء وقت العمل اليدوي بنسبة 100%، القضاء على الأخطاء البشرية، وتسريع وصول المحتوى التعليمي للطلاب بشكل ملحوظ."
+                },
+                "techStack": [
+                    "Zapier / n8n",
+                    "Google Drive API",
+                    "Zoom API",
+                    "Webhooks"
+                ],
+                "metrics": [
+                    {
+                        "value": "100%",
+                        "label_en": "Manual Time Eliminated",
+                        "label_ar": "وقت يدوي تم إلغاؤه"
+                    },
+                    {
+                        "value": "22",
+                        "label_en": "Zoom Accounts",
+                        "label_ar": "حساب Zoom"
+                    }
+                ]
+            },
+            {
+                "id": "clc-legal-academy",
+                "icon": "⚖️",
+                "category": "development",
+                "title": {
+                    "en": "CLC Legal Academy Platform",
+                    "ar": "منصة أكاديمية CLC القانونية"
+                },
+                "subtitle": {
+                    "en": "Vibe Coder & UX Architecture",
+                    "ar": "تطوير شامل وهندسة تجربة المستخدم"
+                },
+                "tag": {
+                    "en": "L&D E-Learning & CRM",
+                    "ar": "منصة تعليم قانوني وإدارة عملاء"
+                },
+                "desc": {
+                    "en": "A premium L&D platform featuring a recommendation quiz, certificate verification, and seamless CRM integration for lead tracking.",
+                    "ar": "منصة تعليمية راقية بتتميز بنظام ذكي لترشيح المسارات، أداة للتحقق من الشهادات، وربط كامل بنظام CRM لتتبع العملاء (Leads)."
+                },
+                "gallery": [
+                    {
+                        "src": "/* image */ public/images/projects/clc-hero.jpg",
+                        "caption": {
+                            "en": "Professional Legal Theme",
+                            "ar": "واجهة احترافية تدعم الوضع الليلي والنهاري"
+                        }
+                    },
+                    {
+                        "src": "/* image */ public/images/projects/clc-verify.jpg",
+                        "caption": {
+                            "en": "Secure Certificate Verification Portal",
+                            "ar": "بوابة التحقق من صحة الشهادات"
+                        }
+                    }
+                ],
+                "challenge": {
+                    "en": "The academy needed an authoritative digital presence to guide students through course selection and a robust backend to manage leads and verify credentials.",
+                    "ar": "الأكاديمية كانت محتاجة منصة توجه الطالب للمسار التدريبي المناسب، ونظام خلفي (Backend) قوي لإدارة بيانات العملاء المحتملين (Leads) والتحقق من الشهادات."
+                },
+                "solution": {
+                    "en": "Developed an interactive platform powered by Supabase. Integrated a custom CRM for lead tracking and built a reliable certificate verification portal to validate alumni.",
+                    "ar": "بنيت منصة تفاعلية باستخدام قاعدة بيانات Supabase. طورت أداة للتحقق من الشهادات (Verification)، وربطت المنصة بنظام إدارة عملاء (CRM) لتتبع مسار الـ Leads بدقة."
+                },
+                "impact": {
+                    "en": "Delivered a trusted educational environment that improves user onboarding through smart recommendations and streamlines sales operations via the CRM pipeline.",
+                    "ar": "النتيجة منصة موثوقة بتسهل رحلة الطالب من خلال الترشيحات الذكية، وبترفع كفاءة فريق المبيعات من خلال تنظيم بيانات العملاء في الـ CRM."
+                },
+                "techStack": [
+                    "React / Next.js",
+                    "Supabase",
+                    "CRM Integration",
+                    "Interactive Logic"
+                ],
+                "metrics": [
+                    {
+                        "value": "Smart",
+                        "label_en": "CRM Lead Tracking",
+                        "label_ar": "تتبع ذكي للعملاء"
+                    },
+                    {
+                        "value": "Secure",
+                        "label_en": "Certificate Verification",
+                        "label_ar": "تحقق آمن من الشهادات"
+                    }
+                ]
+            },
+            {
+                "id": "barah-sales-crm",
+                "icon": "📊",
+                "category": "operations",
+                "title": {
+                    "en": "Barah Sales Management System",
+                    "ar": "نظام إدارة المبيعات - براح"
+                },
+                "subtitle": {
+                    "en": "System Architect",
+                    "ar": "مهندس النظام"
+                },
+                "tag": {
+                    "en": "Custom SaaS / CRM",
+                    "ar": "نظام مبيعات مخصص"
+                },
+                "desc": {
+                    "en": "A centralized, Arabic-first CRM utilizing Supabase to manage deal pipelines, track tasks, and monitor sales team performance.",
+                    "ar": "نظام متكامل لإدارة المبيعات مبني على Supabase، مصمم لتركيز بيانات العملاء، إدارة مسار الصفقات، وتتبع أداء فريق المبيعات."
+                },
+                "gallery": [
+                    {
+                        "src": "/* image */ public/images/projects/barah-dashboard.png",
+                        "caption": {
+                            "en": "Executive Sales Dashboard",
+                            "ar": "لوحة تحكم تنفيذية لإحصائيات المبيعات"
+                        }
+                    },
+                    {
+                        "src": "/* image */ public/images/projects/barah-rbac.png",
+                        "caption": {
+                            "en": "Role-Based Access Control",
+                            "ar": "نظام إدارة المستخدمين والصلاحيات"
+                        }
+                    }
+                ],
+                "challenge": {
+                    "en": "The company struggled with scattered data and lacked real-time visibility into the sales pipeline, overdue tasks, and representative performance.",
+                    "ar": "الشركة كانت بتعاني من تشتت البيانات وغياب الرؤية اللحظية لحالة الصفقات، المهام المتأخرة، وأداء كل مندوب مبيعات."
+                },
+                "solution": {
+                    "en": "Engineered a custom CRM backed by Supabase with strict Role-Based Access Control (RBAC). Built modules for task tracking, deal management, and daily reporting.",
+                    "ar": "طورت نظام CRM متكامل باستخدام قاعدة بيانات Supabase مع هيكل صلاحيات دقيق (RBAC). برمجت وحدات لتتبع المهام، إدارة الصفقات، وإصدار التقارير."
+                },
+                "impact": {
+                    "en": "Created a centralized operational hub that enhanced team accountability, secured client data, and provided clear dashboards for rapid decision-making.",
+                    "ar": "النتيجة بيئة عمل تشغيلية مركزية رفعت من إنتاجية الفريق، أمنت بيانات العملاء، ووفرت تقارير واضحة لدعم قرارات البيع."
+                },
+                "techStack": [
+                    "React / Next.js",
+                    "Supabase",
+                    "Role-Based Access (RBAC)",
+                    "Dashboard Analytics"
+                ],
+                "metrics": [
+                    {
+                        "value": "RBAC",
+                        "label_en": "Multi-Level Access",
+                        "label_ar": "صلاحيات متعددة"
+                    },
+                    {
+                        "value": "100%",
+                        "label_en": "Data Centralization",
+                        "label_ar": "مركزية البيانات"
+                    }
+                ]
+            },
+            {
+                "id": "software-masters-academy",
+                "icon": "💻",
+                "category": "development",
+                "title": {
+                    "en": "Software Master's Platform",
+                    "ar": "منصة أكاديمية Software Master's"
+                },
+                "subtitle": {
+                    "en": "Vibe Coder & UI/UX",
+                    "ar": "مطور واجهات وتجربة المستخدم"
+                },
+                "tag": {
+                    "en": "EdTech Template",
+                    "ar": "نموذج منصة تعليمية"
+                },
+                "desc": {
+                    "en": "A modern, responsive e-learning template designed to showcase tech diplomas with a seamless WhatsApp-integrated booking flow.",
+                    "ar": "نموذج عصري لمنصة تعليمية، متصمم لعرض الدبلومات التقنية مع نظام حجز ذكي وسلس مربوط بالواتساب."
+                },
+                "gallery": [
+                    {
+                        "src": "/* image */ public/images/projects/sm-hero.jpg",
+                        "caption": {
+                            "en": "Modern Hero Section Design",
+                            "ar": "تصميم الواجهة الرئيسية"
+                        }
+                    }
+                ],
+                "challenge": {
+                    "en": "Conceptualizing a high-quality L&D interface that balances a tech-focused aesthetic with straightforward, frictionless student registration.",
+                    "ar": "الهدف كان تصميم واجهة تعليمية بتوازن بين الشكل التكنولوجي الجذاب وسهولة الاستخدام عشان الطالب يحجز بدون تشتت."
+                },
+                "solution": {
+                    "en": "Developed a fully responsive web app utilizing modern design principles and a smart registration process routing directly to WhatsApp.",
+                    "ar": "طورت ويب أبلكيشن متجاوب بالكامل وعملت نظام تسجيل بياخد بيانات الطالب ويحوله فوراً على الواتساب لتأكيد العملية بسهولة."
+                },
+                "impact": {
+                    "en": "Delivered a clean template demonstrating efficient user flows and a strong understanding of conversion-focused educational design.",
+                    "ar": "النتيجة نموذج احترافي بيعكس تصميم مسارات مستخدم (User Flows) واضحة ومباشرة تركز على زيادة معدلات التحويل (Conversion)."
+                },
+                "techStack": [
+                    "React / Next.js",
+                    "Modern UI/UX",
+                    "Form Integration"
+                ],
+                "metrics": [
+                    {
+                        "value": "Smart",
+                        "label_en": "User Flow",
+                        "label_ar": "مسار مستخدم ذكي"
+                    }
+                ]
+            },
+            {
+                "id": "edc-center-platform",
+                "icon": "🌍",
+                "category": "development",
+                "title": {
+                    "en": "EDC Center Educational Platform",
+                    "ar": "منصة مركز EDC التعليمي"
+                },
+                "subtitle": {
+                    "en": "Vibe Coder",
+                    "ar": "مطور بأسلوب Vibe Coder"
+                },
+                "tag": {
+                    "en": "Language L&D App",
+                    "ar": "منصة تعليم لغات"
+                },
+                "desc": {
+                    "en": "A vibrant L&D website utilizing Supabase for an English language center, featuring clear course pathways and dynamic theming.",
+                    "ar": "واجهة رقمية تفاعلية مدعومة بقاعدة بيانات Supabase لمركز تعليم لغات، بتعرض مسارات التعلم بشكل جذاب ومقسم بالألوان."
+                },
+                "gallery": [
+                    {
+                        "src": "/* image */ public/images/projects/edc-courses.jpg",
+                        "caption": {
+                            "en": "Color-Coded Course Categorization",
+                            "ar": "عرض جذاب ومقسم بالألوان لمسارات التعلم"
+                        }
+                    }
+                ],
+                "challenge": {
+                    "en": "The center needed a digital storefront to clearly categorize diverse English programs and encourage student exploration without cognitive overload.",
+                    "ar": "المركز كان محتاج واجهة تصنف البرامج المختلفة بشكل يسهل على الزائر اختيار الكورس المناسب من غير ما يحس بتشتت."
+                },
+                "solution": {
+                    "en": "Designed a clean interface with color-coded course cards, integrated a robust Supabase backend, and implemented a Dark/Light toggle.",
+                    "ar": "صممت واجهة مقسمة بألوان مميزة لكل كورس، وربطتها بقاعدة بيانات Supabase، مع إضافة وضع ليلي/نهاري لتجربة تصفح مريحة."
+                },
+                "impact": {
+                    "en": "Delivered a highly engaging platform that communicates value effectively and streamlines the discovery phase for students.",
+                    "ar": "النتيجة منصة سريعة التجاوب بتخلي رحلة الطالب من أول استكشاف الكورسات لحد التسجيل بسيطة ومباشرة."
+                },
+                "techStack": [
+                    "React / Next.js",
+                    "Supabase",
+                    "Dynamic Theming"
+                ],
+                "metrics": [
+                    {
+                        "value": "Smart",
+                        "label_en": "Color-Coded UI",
+                        "label_ar": "تصنيف لوني ذكي"
+                    }
+                ]
+            },
+            {
+                "id": "qualifiders-consulting",
+                "icon": "🏢",
+                "category": "development",
+                "title": {
+                    "en": "QUALIFIDERS Consulting Platform",
+                    "ar": "موقع شركة كواليفايدرز للاستشارات"
+                },
+                "subtitle": {
+                    "en": "WordPress Architecture & Development",
+                    "ar": "تطوير وهندسة الموقع باستخدام WordPress"
+                },
+                "tag": {
+                    "en": "Corporate Solutions",
+                    "ar": "مؤسسة استشارات مالية"
+                },
+                "desc": {
+                    "en": "A highly professional corporate website developed fully on WordPress for a financial and administrative consulting firm.",
+                    "ar": "واجهة رقمية احترافية مبنية بالكامل على WordPress لشركة استشارات مالية وإدارية، لتعكس هوية الشركة وموثوقيتها."
+                },
+                "gallery": [
+                    {
+                        "src": "/* image */ public/images/projects/qualifiders-methodology.jpg",
+                        "caption": {
+                            "en": "Custom QUALIFI Methodology",
+                            "ar": "عرض منهجية العمل الخاصة بالشركة"
+                        }
+                    }
+                ],
+                "challenge": {
+                    "en": "The firm required a dignified digital presence to establish trust with enterprise clients and articulate complex B2B services clearly.",
+                    "ar": "الشركة كانت محتاجة واجهة تعكس ثقلها في سوق الاستشارات، وتبني ثقة مع الشركات وتعرض خدماتها المعقدة بشكل مبسط ومنظم."
+                },
+                "solution": {
+                    "en": "Built a scalable WordPress CMS architecture to logically highlight their unique methodology, leadership expertise, and core B2B services.",
+                    "ar": "بنيت نظام إدارة محتوى متكامل (CMS) باستخدام WordPress، وركزت على هيكلة الموقع عشان نبرز منهجية الشركة والخدمات بمسار تصفح مريح."
+                },
+                "impact": {
+                    "en": "Delivered an impactful corporate interface that communicates credibility and serves as a strong foundation for high-ticket lead generation.",
+                    "ar": "موقع رسمي بيعكس مصداقية الشركة بقوة وبيبني صورة ذهنية احترافية بتساعد في جذب شركاء وعملاء بحجم كبير."
+                },
+                "techStack": [
+                    "WordPress CMS",
+                    "Content Architecture",
+                    "B2B Design Patterns"
+                ],
+                "metrics": [
+                    {
+                        "value": "MENA",
+                        "label_en": "Market Focus",
+                        "label_ar": "موجه للسوق الإقليمي"
+                    }
+                ]
+            }
+        ]
+    },
+    "timeline": {
+        "_note": "خبراتك المهنية بالترتيب من الأحدث للأقدم",
+        "entries": [
+            {
+                "title": {
+                    "en": "Senior Operations Specialist",
+                    "ar": "أخصائي عمليات أول"
+                },
+                "company": {
+                    "en": "Instant Software Solutions",
+                    "ar": "Instant Software Solutions"
+                },
+                "type": "full-time",
+                "date": {
+                    "en": "2023 – Present",
+                    "ar": "٢٠٢٣ – الآن"
+                },
+                "location": {
+                    "en": "Cairo, Egypt",
+                    "ar": "القاهرة، مصر"
+                },
+                "desc": {
+                    "en": "Leading technical operations, building robust automated pipelines, and managing cross-functional integrations to streamline enterprise processes.",
+                    "ar": "قيادة العمليات التقنية، هندسة مسارات الأتمتة، وإدارة التكامل بين الأنظمة والأدوات المختلفة لتبسيط بيئة العمل ورفع الكفاءة."
+                },
+                "tags": [
+                    "Operations",
+                    "Automation",
+                    "RevOps"
+                ]
+            },
+            {
+                "title": {
+                    "en": "Integrated Operator & Vibe Coder",
+                    "ar": "المشغل المتكامل ومطور Vibe Coder"
+                },
+                "company": {
+                    "en": "Freelance / Independent Projects",
+                    "ar": "عمل حر / مشاريع مستقلة"
+                },
+                "type": "part-time",
+                "date": {
+                    "en": "2021 – Present",
+                    "ar": "٢٠٢١ – الآن"
+                },
+                "location": {
+                    "en": "Cairo, Egypt",
+                    "ar": "القاهرة، مصر"
+                },
+                "desc": {
+                    "en": "Leveraging AI tools (Cursor, Claude, Gemini) to architect custom web applications and L&D operational systems. Specializing in Supabase databases.",
+                    "ar": "استخدام أدوات الذكاء الاصطناعي (زي Cursor و Claude) لبناء تطبيقات ويب وأنظمة تشغيلية مخصصة، مع التركيز على قواعد بيانات Supabase."
+                },
+                "tags": [
+                    "AI Coding",
+                    "L&D Solutions",
+                    "Supabase"
+                ]
+            }
+        ]
+    },
+    "skills": {
+        "_note": "الأدوات والمهارات اللي هتظهر كـ badges — حط أيقونة Emoji أو اسم أيقونة",
+        "categories": [
+            {
+                "name_en": "Operations & L&D Logic",
+                "name_ar": "العمليات والمنطق البرمجي",
+                "color": "cyan",
+                "items": [
+                    {
+                        "name": "Supabase",
+                        "icon": "🗄️"
+                    },
+                    {
+                        "name": "CRM Systems",
+                        "icon": "🗂"
+                    },
+                    {
+                        "name": "Zapier / n8n",
+                        "icon": "⚡"
+                    },
+                    {
+                        "name": "React / Next.js",
+                        "icon": "⚛️"
+                    }
+                ]
+            },
+            {
+                "name_en": "AI-Powered Vibe Coding",
+                "name_ar": "التطوير بالذكاء الاصطناعي",
+                "color": "purple",
+                "items": [
+                    {
+                        "name": "Cursor AI",
+                        "icon": "🤖"
+                    },
+                    {
+                        "name": "Claude",
+                        "icon": "🧠"
+                    },
+                    {
+                        "name": "Gemini",
+                        "icon": "✨"
+                    },
+                    {
+                        "name": "Antigravity",
+                        "icon": "🚀"
+                    },
+                    {
+                        "name": "Custom Gems",
+                        "icon": "💎"
+                    }
+                ]
+            },
+            {
+                "name_en": "Secure Infrastructure",
+                "name_ar": "البنية التحتية الآمنة",
+                "color": "green",
+                "items": [
+                    {
+                        "name": "CCNA",
+                        "icon": "🌐"
+                    },
+                    {
+                        "name": "CompTIA A+",
+                        "icon": "🛡"
+                    },
+                    {
+                        "name": "Cyber Security",
+                        "icon": "🔐"
+                    }
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "tagline": {
+            "en": "Need an Integrated Operator to streamline your L&D business?",
+            "ar": "محتاج مشغل متكامل يسهل عمليات شركتك بذكاء؟"
+        },
+        "email": "Mo3tazaky@hotmail.com",
+        "linkedin": "https://linkedin.com/in/moatazaky/",
+        "github": "https://github.com/Eli0zak",
+        "whatsapp": "+201554050957",
+        "signature_quote": {
+            "en": "\"Turning a big dream into a big reality.\"",
+            "ar": "\"تحويل حلم كبير إلى واقع كبير.\""
+        }
+    },
+    "seo": {
+        "site_title": {
+            "en": "Moataz Zaky — Vibe Coder & Integrated Operator",
+            "ar": "معتز زكي — Vibe Coder ومشغل متكامل"
+        },
+        "meta_description": {
+            "en": "Portfolio of Moataz Zaky — Senior Operations Specialist, Vibe Coder, and Integrated Operator specializing in smart solutions and automation for the L&D sector.",
+            "ar": "بورتفوليو معتز زكي — أخصائي عمليات أول، مطور Vibe Coder، ومشغل متكامل متخصص في تقديم حلول ذكية وأتمتة لقطاع التدريب والتطوير."
+        },
+        "og_image": "/* image */ public/images/og-cover.png"
+    }
+}

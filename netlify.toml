@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build && cp -r img dist/img"
+  command = "npm run build"
   publish = "dist"
 
 [[redirects]]
