@@ -19,7 +19,7 @@ const resources = {
             hero_cta: 'Explore My Work',
             hero_scroll: 'SCROLL TO EXPLORE',
             hero_titles: [
-                'Senior Operations Specialist',
+                'Enterprise Systems Engineer',
                 'Integrated Operator',
                 'Vibe Coder',
                 'L&D Solutions Architect'
@@ -38,7 +38,7 @@ const resources = {
             // Timeline
             timeline_title: 'OPERATIONS TRAJECTORY',
             timeline_subtitle: 'A ground-up journey through operations, sales, and tech.',
-            job1_title: 'Senior Operations Specialist',
+            job1_title: 'Enterprise Systems Engineer',
             job1_company: 'Instant Software Solutions',
             job1_date: '2023 – Present',
             job1_desc: 'Leading technical operations, building robust automated pipelines, and managing cross-functional integrations to streamline enterprise processes.',
@@ -97,7 +97,7 @@ const resources = {
             hero_cta: 'استكشف أعمالي',
             hero_scroll: 'مرر للاستكشاف',
             hero_titles: [
-                'أخصائي عمليات أول',
+                'مهندس أنظمة مؤسسية',
                 'المشغل المتكامل',
                 'Vibe Coder',
                 'مهندس حلول التدريب والتطوير'
@@ -116,7 +116,7 @@ const resources = {
             // Timeline
             timeline_title: 'المسار المهني',
             timeline_subtitle: 'رحلة من الأسفل للأعلى في العمليات والمبيعات والتقنية.',
-            job1_title: 'أخصائي عمليات أول',
+            job1_title: 'مهندس أنظمة مؤسسية',
             job1_company: 'Instant Software Solutions',
             job1_date: '٢٠٢٣ – الآن',
             job1_desc: 'قيادة العمليات التقنية، هندسة مسارات الأتمتة، وإدارة التكامل بين الأنظمة والأدوات المختلفة لتبسيط بيئة العمل ورفع الكفاءة.',

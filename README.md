@@ -1,6 +1,6 @@
 # Mo3tazaky — Portfolio of Moataz Zaky
 
-> **Senior Operations Specialist | Full-Stack Developer | Cybersecurity Enthusiast**  
+> **Enterprise Systems Engineer | Full-Stack Developer | Cybersecurity Enthusiast**
 > Cairo, Egypt · [LinkedIn](https://www.linkedin.com/in/moatazaky/) · [GitHub](https://github.com/Eli0zak) · mo3tazaky@hotmail.com
 
 ---
@@ -9,7 +9,7 @@
 
 A results-driven operations specialist and self-taught developer with 3+ years of experience bridging the gap between technology and business operations. I build full-stack web apps, automation systems, and cybersecurity tools that solve real operational problems.
 
-- Currently: **Senior Operations Specialist** at Instant Software Solutions
+- Currently: **Enterprise Systems Engineer** at Instant Software Solutions
 - Founder of operational systems managing **100+ active student groups**
 - Automating workflows that save **2+ hours/day** per team member
 - Certified in **CCNA**, **Cybersecurity**, and **CompTIA A+**

@@ -24,13 +24,13 @@
         "titles": {
             "_note": "هتتناوب جوه الـ Typewriter — حط من 3 لـ 5 عناوين",
             "list_en": [
-                "Senior Operations Specialist",
+                "Enterprise Systems Engineer",
                 "Integrated Operator",
                 "Vibe Coder",
                 "L&D Solutions Architect"
             ],
             "list_ar": [
-                "أخصائي عمليات أول",
+                "مهندس أنظمة مؤسسية",
                 "المشغل المتكامل",
                 "Vibe Coder",
                 "مهندس حلول التدريب والتطوير"
@@ -427,8 +427,8 @@
         "entries": [
             {
                 "title": {
-                    "en": "Senior Operations Specialist",
-                    "ar": "أخصائي عمليات أول"
+                    "en": "Enterprise Systems Engineer",
+                    "ar": "مهندس أنظمة مؤسسية"
                 },
                 "company": {
                     "en": "Instant Software Solutions",
@@ -577,8 +577,8 @@
             "ar": "معتز زكي — Vibe Coder ومشغل متكامل"
         },
         "meta_description": {
-            "en": "Portfolio of Moataz Zaky — Senior Operations Specialist, Vibe Coder, and Integrated Operator specializing in smart solutions and automation for the L&D sector.",
-            "ar": "بورتفوليو معتز زكي — أخصائي عمليات أول، مطور Vibe Coder، ومشغل متكامل متخصص في تقديم حلول ذكية وأتمتة لقطاع التدريب والتطوير."
+            "en": "Portfolio of Moataz Zaky — Enterprise Systems Engineer, Vibe Coder, and Integrated Operator specializing in smart solutions and automation for the L&D sector.",
+            "ar": "بورتفوليو معتز زكي — مهندس أنظمة مؤسسية، مطور Vibe Coder، ومشغل متكامل متخصص في تقديم حلول ذكية وأتمتة لقطاع التدريب والتطوير."
         },
         "og_image": "/* image */ public/images/og-cover.png"
     }
