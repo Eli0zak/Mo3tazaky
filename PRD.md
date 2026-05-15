@@ -31,7 +31,7 @@
 - Social links (LinkedIn, GitHub).
 
 ### Operations Roadmap (Experience)
-- **Senior Operations Specialist @ Instant Software Solutions:** 
+- **Enterprise Systems Engineer @ Instant Software Solutions:**
   - Managed operations for 100+ student groups across 22 Zoom accounts.
   - Built IOMS (Institute Operations Management System).
   - Automated recording pipelines saving 2+ hours daily.

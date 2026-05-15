@@ -29,7 +29,7 @@ const OperationsRoadmap = () => {
 
                     <TimelineItem
                         date="Dec 2025 - Present"
-                        title="Senior Operations Specialist"
+                        title="Enterprise Systems Engineer"
                         company="Instant Software Solutions"
                         location="Dokki"
                         delay="0"
