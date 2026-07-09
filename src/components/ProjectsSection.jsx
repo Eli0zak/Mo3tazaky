@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import projects from '../data/projects.js';
+import TiltWrapper from './TiltWrapper';
 
 // Top-right folder icon
 function FolderIcon() {
@@ -93,77 +94,79 @@ export default function ProjectsSection() {
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.35, delay: i * 0.07 }}
                             >
-                                <Link to={`/projects/${p.id}`} className="project-card glass-card" style={{ height: '100%', textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column' }}>
-                                    {/* Card Thumbnail / Header */}
-                                    <div className="pcard-thumbnail-wrapper">
-                                        {p.gallery && p.gallery.length > 0 ? (
-                                            p.gallery[0].src.match(/\.(mp4|webm)$/i) ? (
-                                                <div className="pcard-video-container">
-                                                    <video
+                                <TiltWrapper className="project-card-tilt-wrap" style={{ height: '100%' }}>
+                                    <Link to={`/projects/${p.id}`} className="project-card glass-card" style={{ height: '100%', textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column' }}>
+                                        {/* Card Thumbnail / Header */}
+                                        <div className="pcard-thumbnail-wrapper">
+                                            {p.gallery && p.gallery.length > 0 ? (
+                                                p.gallery[0].src.match(/\.(mp4|webm)$/i) ? (
+                                                    <div className="pcard-video-container">
+                                                        <video
+                                                            src={p.gallery[0].src}
+                                                            className="pcard-thumbnail"
+                                                            muted
+                                                            playsInline
+                                                            loop
+                                                            preload="metadata"
+                                                            onMouseEnter={(e) => e.currentTarget.play().catch(() => {})}
+                                                            onMouseLeave={(e) => {
+                                                                e.currentTarget.pause();
+                                                                e.currentTarget.currentTime = 0;
+                                                            }}
+                                                        />
+                                                        <div className="pcard-play-hint">
+                                                            <span>{isAr ? 'مرر لتشغيل المعاينة' : 'Hover to play preview'}</span>
+                                                        </div>
+                                                    </div>
+                                                ) : (
+                                                    <img
                                                         src={p.gallery[0].src}
+                                                        alt={isAr ? p.titleAr : p.titleEn}
                                                         className="pcard-thumbnail"
-                                                        muted
-                                                        playsInline
-                                                        loop
-                                                        preload="metadata"
-                                                        onMouseEnter={(e) => e.currentTarget.play().catch(() => {})}
-                                                        onMouseLeave={(e) => {
-                                                            e.currentTarget.pause();
-                                                            e.currentTarget.currentTime = 0;
-                                                        }}
+                                                        loading="lazy"
                                                     />
-                                                    <div className="pcard-play-hint">
-                                                        <span>{isAr ? 'مرر لتشغيل المعاينة' : 'Hover to play preview'}</span>
+                                                )
+                                            ) : (
+                                                <div className="pcard-thumbnail-placeholder">
+                                                    <span style={{ fontSize: '2.5rem' }}>{p.icon || '📁'}</span>
+                                                </div>
+                                            )}
+
+                                            {/* Icon & Link overlays on the image */}
+                                            <div className="pcard-thumbnail-overlay">
+                                                <span className="pcard-category-tag">
+                                                    {isAr ? p.tagAr || p.category : p.tagEn || p.category}
+                                                </span>
+                                                <div className="pcard-thumbnail-actions">
+                                                    <div className="pcard-ext-link" title={isAr ? 'عرض التفاصيل' : 'View project detail'}>
+                                                        <ExternalLinkIcon />
+                                                    </div>
+                                                    <div className="pcard-folder-badge">
+                                                        <FolderIcon />
                                                     </div>
                                                 </div>
-                                            ) : (
-                                                <img
-                                                    src={p.gallery[0].src}
-                                                    alt={isAr ? p.titleAr : p.titleEn}
-                                                    className="pcard-thumbnail"
-                                                    loading="lazy"
-                                                />
-                                            )
-                                        ) : (
-                                            <div className="pcard-thumbnail-placeholder">
-                                                <span style={{ fontSize: '2.5rem' }}>{p.icon || '📁'}</span>
-                                            </div>
-                                        )}
-
-                                        {/* Icon & Link overlays on the image */}
-                                        <div className="pcard-thumbnail-overlay">
-                                            <span className="pcard-category-tag">
-                                                {isAr ? p.tagAr || p.category : p.tagEn || p.category}
-                                            </span>
-                                            <div className="pcard-thumbnail-actions">
-                                                <div className="pcard-ext-link" title={isAr ? 'عرض التفاصيل' : 'View project detail'}>
-                                                    <ExternalLinkIcon />
-                                                </div>
-                                                <div className="pcard-folder-badge">
-                                                    <FolderIcon />
-                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    {/* Body */}
-                                    <div className="pcard-body">
-                                        <h3 className="pcard-title">
-                                            {isAr ? p.titleAr : p.titleEn}
-                                        </h3>
-                                        <p className="pcard-subtitle">
-                                            {isAr ? p.subtitleAr : p.subtitleEn}
-                                        </p>
-                                        <p className="pcard-desc">
-                                            {isAr ? p.descAr : p.descEn}
-                                        </p>
+                                        {/* Body */}
+                                        <div className="pcard-body">
+                                            <h3 className="pcard-title">
+                                                {isAr ? p.titleAr : p.titleEn}
+                                            </h3>
+                                            <p className="pcard-subtitle">
+                                                {isAr ? p.subtitleAr : p.subtitleEn}
+                                            </p>
+                                            <p className="pcard-desc">
+                                                {isAr ? p.descAr : p.descEn}
+                                            </p>
 
-                                        {/* CTA */}
-                                        <div className="pcard-cta">
-                                            {isAr ? 'اقرأ التفاصيل' : 'Read Case Study'} →
+                                            {/* CTA */}
+                                            <div className="pcard-cta">
+                                                {isAr ? 'اقرأ التفاصيل' : 'Read Case Study'} →
+                                            </div>
                                         </div>
-                                    </div>
-                                </Link>
+                                    </Link>
+                                </TiltWrapper>
                             </motion.div>
                         ))}
                     </AnimatePresence>

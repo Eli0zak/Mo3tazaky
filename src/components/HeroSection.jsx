@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import TiltWrapper from './TiltWrapper';
 
 // Animated particle canvas background
 function ParticleCanvas() {
@@ -156,76 +157,78 @@ export default function HeroSection() {
             <div className="hero-grid-overlay" />
 
             <div className="hero-inner">
-                <motion.div
-                    className="identity-card glass-card"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
-                    {/* Card Header */}
-                    <motion.div className="card-header" variants={itemVariants}>
-                        <div className="status-indicator">
-                            <span className="status-dot" />
-                            <span className="status-text">{t('hero_status')}</span>
-                        </div>
-                        <span className="operator-id">{t('hero_operator_id')}</span>
-                    </motion.div>
-
-                    {/* Left Column: Photo & Name */}
-                    <motion.div className="hero-col-left" variants={itemVariants}>
-                        {/* Profile Photo */}
-                        <motion.div className="profile-photo-container" style={{ width: '220px', height: '220px', margin: '0 auto 1.5rem', position: 'relative' }}>
-                            <div className="profile-photo-ring" style={{ width: '100%', height: '100%', padding: '4px', background: 'linear-gradient(45deg, var(--primary-blue), transparent)', borderRadius: '50%' }}>
-                                <img src="/photo.png" alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)' }} />
+                <TiltWrapper className="identity-card-tilt-wrap" style={{ width: '100%' }}>
+                    <motion.div
+                        className="identity-card glass-card"
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        {/* Card Header */}
+                        <motion.div className="card-header" variants={itemVariants}>
+                            <div className="status-indicator">
+                                <span className="status-dot" />
+                                <span className="status-text">{t('hero_status')}</span>
                             </div>
+                            <span className="operator-id">{t('hero_operator_id')}</span>
                         </motion.div>
 
-                        {/* Name */}
-                        <motion.h1 className="operator-name">
-                            {t('hero_name')}
-                        </motion.h1>
+                        {/* Left Column: Photo & Name */}
+                        <motion.div className="hero-col-left" variants={itemVariants}>
+                            {/* Profile Photo */}
+                            <motion.div className="profile-photo-container" style={{ width: '220px', height: '220px', margin: '0 auto 1.5rem', position: 'relative' }}>
+                                <div className="profile-photo-ring" style={{ width: '100%', height: '100%', padding: '4px', background: 'linear-gradient(45deg, var(--primary-blue), transparent)', borderRadius: '50%' }}>
+                                    <img src="/photo.png" alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.05)' }} />
+                                </div>
+                            </motion.div>
 
-                        {/* Typewriter Titles */}
-                        <motion.div>
-                            <TypewriterTitle titles={Array.isArray(titles) ? titles : []} />
-                        </motion.div>
-                    </motion.div>
+                            {/* Name */}
+                            <motion.h1 className="operator-name">
+                                {t('hero_name')}
+                            </motion.h1>
 
-                    {/* Right Column: Bio, Stats, CTA */}
-                    <motion.div className="hero-col-right" variants={itemVariants}>
-                        {/* Bio */}
-                        <motion.p className="hero-bio">
-                            {t('hero_bio')}
-                        </motion.p>
-
-                        {/* Stats */}
-                        <motion.div className="quick-stats">
-                            <div className="stat-item">
-                                <span className="stat-value">
-                                    <AnimatedCounter target={t('stat_automation')} suffix="%" />
-                                </span>
-                                <span className="stat-label">{t('stat_automation_label')}</span>
-                            </div>
-                            <div className="stat-divider" />
-                            <div className="stat-item">
-                                <span className="stat-value">
-                                    <AnimatedCounter target={t('stat_years')} suffix="+" />
-                                </span>
-                                <span className="stat-label">{t('stat_years_label')}</span>
-                            </div>
-                            <div className="stat-divider" />
-                            <div className="stat-item">
-                                <span className="stat-value">{t('stat_platforms')}</span>
-                                <span className="stat-label">{t('stat_platforms_label')}</span>
-                            </div>
+                            {/* Typewriter Titles */}
+                            <motion.div>
+                                <TypewriterTitle titles={Array.isArray(titles) ? titles : []} />
+                            </motion.div>
                         </motion.div>
 
-                        {/* CTA */}
-                        <motion.a className="cta-button" href="#solutions" onClick={scrollToSolutions}>
-                            {t('hero_cta')} →
-                        </motion.a>
+                        {/* Right Column: Bio, Stats, CTA */}
+                        <motion.div className="hero-col-right" variants={itemVariants}>
+                            {/* Bio */}
+                            <motion.p className="hero-bio">
+                                {t('hero_bio')}
+                            </motion.p>
+
+                            {/* Stats */}
+                            <motion.div className="quick-stats">
+                                <div className="stat-item">
+                                    <span className="stat-value">
+                                        <AnimatedCounter target={t('stat_automation')} suffix="%" />
+                                    </span>
+                                    <span className="stat-label">{t('stat_automation_label')}</span>
+                                </div>
+                                <div className="stat-divider" />
+                                <div className="stat-item">
+                                    <span className="stat-value">
+                                        <AnimatedCounter target={t('stat_years')} suffix="+" />
+                                    </span>
+                                    <span className="stat-label">{t('stat_years_label')}</span>
+                                </div>
+                                <div className="stat-divider" />
+                                <div className="stat-item">
+                                    <span className="stat-value">{t('stat_platforms')}</span>
+                                    <span className="stat-label">{t('stat_platforms_label')}</span>
+                                </div>
+                            </motion.div>
+
+                            {/* CTA */}
+                            <motion.a className="cta-button" href="#solutions" onClick={scrollToSolutions}>
+                                {t('hero_cta')} →
+                            </motion.a>
+                        </motion.div>
                     </motion.div>
-                </motion.div>
+                </TiltWrapper>
             </div>
 
             {/* Scroll indicator */}

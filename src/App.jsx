@@ -12,6 +12,7 @@ import ProjectDetailPage from './pages/ProjectDetailPage';
 import DataStream from './components/DataStream';
 import MorphingTitle from './components/MorphingTitle';
 import ScrollToTop from './components/ScrollToTop';
+import CustomCursor from './components/CustomCursor';
 
 
 
@@ -100,6 +101,7 @@ function AppContent() {
                 transition={{ duration: 0.25 }}
                 className="app-root"
             >
+                <CustomCursor />
                 <ScrollToTop />
                 <Navbar />
 

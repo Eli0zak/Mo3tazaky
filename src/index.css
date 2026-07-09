@@ -2718,3 +2718,77 @@ html {
         align-self: stretch;
     }
 }
+
+/* ==========================================
+   CUSTOM CURSOR & TILT PERSPECTIVE STYLES
+   ========================================== */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--primary-blue);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    mix-blend-mode: difference;
+    background: transparent;
+    transition: 
+        width 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+        height 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+        background-color 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+        border-color 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.custom-cursor.hover {
+    width: 58px;
+    height: 58px;
+    background-color: rgba(0, 212, 255, 0.08);
+    border-color: rgba(0, 212, 255, 0.55);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
+}
+
+/* Hide native cursor on desktop to allow custom cursor representation */
+@media (pointer: fine) {
+    html, body {
+        cursor: none;
+    }
+    
+    a, button, 
+    .project-card, 
+    .studio-link-card, 
+    .social-link-item, 
+    .cta-button,
+    .filter-btn,
+    [role="button"] {
+        cursor: none !important;
+    }
+}
+
+/* Perspective setup for 3D tilts */
+.identity-card-tilt-wrap,
+.project-card-tilt-wrap {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* Inner elements lift effect when parent tilts */
+.identity-card-tilt-wrap .identity-card,
+.project-card-tilt-wrap .project-card {
+    transform-style: preserve-3d;
+}
+
+.identity-card-tilt-wrap .profile-photo-container,
+.project-card-tilt-wrap .pcard-thumbnail-wrapper {
+    transform: translateZ(25px);
+}
+
+.identity-card-tilt-wrap .operator-name,
+.project-card-tilt-wrap .pcard-title {
+    transform: translateZ(15px);
+}
