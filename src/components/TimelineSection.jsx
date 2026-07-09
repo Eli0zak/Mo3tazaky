@@ -41,6 +41,7 @@ export default function TimelineSection() {
         { title: t('job2_title'), company: t('job2_company'), date: t('job2_date'), desc: t('job2_desc') },
         { title: t('job3_title'), company: t('job3_company'), date: t('job3_date'), desc: t('job3_desc') },
         { title: t('job4_title'), company: t('job4_company'), date: t('job4_date'), desc: t('job4_desc') },
+        { title: t('job5_title'), company: t('job5_company'), date: t('job5_date'), desc: t('job5_desc') },
     ];
 
     return (
