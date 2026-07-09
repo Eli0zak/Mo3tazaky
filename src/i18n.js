@@ -38,6 +38,11 @@ const resources = {
             // Timeline
             timeline_title: 'OPERATIONS TRAJECTORY',
             timeline_subtitle: 'A ground-up journey through operations, sales, and tech.',
+            timeline_in_progress: 'IN PROGRESS',
+            course1_title: 'BD Professional (Business Development)',
+            course1_company: 'Business Development Institute (BDI)',
+            course1_date: '2026 – Present',
+            course1_desc: 'Studying core methodologies of B2B market dynamics, strategic partnerships, sales frameworks (SOSTAC, Ansoff Matrix), and ecosystem mapping.',
             job1_title: 'Enterprise Systems Engineer & Sr. Ops Specialist',
             job1_company: 'Instant Software Solutions',
             job1_date: 'Dec 2025 – Present',
@@ -121,6 +126,11 @@ const resources = {
             // Timeline
             timeline_title: 'المسار المهني',
             timeline_subtitle: 'رحلة من الأسفل للأعلى في العمليات والمبيعات والتقنية.',
+            timeline_in_progress: 'قيد الدراسة',
+            course1_title: 'خبير تطوير الأعمال (BD Professional)',
+            course1_company: 'معهد تطوير الأعمال (BDI)',
+            course1_date: '٢٠٢٦ – الآن',
+            course1_desc: 'دراسة المنهجيات الأساسية لتطوير الأعمال، تكتيكات مبيعات B2B، أبحاث السوق، التحالفات الاستراتيجية، وأدوات التخطيط (SOSTAC و Ansoff Matrix).',
             job1_title: 'مهندس أنظمة مؤسسية وأخصائي عمليات أول (Senior Operations Specialist)',
             job1_company: 'Instant Software Solutions',
             job1_date: 'ديسمبر ٢٠٢٥ – الآن',
