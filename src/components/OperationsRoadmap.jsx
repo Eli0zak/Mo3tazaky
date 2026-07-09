@@ -29,14 +29,14 @@ const OperationsRoadmap = () => {
 
                     <TimelineItem
                         date="Dec 2025 - Present"
-                        title="Enterprise Systems Engineer"
+                        title="Enterprise Systems Engineer & Sr. Ops Specialist"
                         company="Instant Software Solutions"
-                        location="Dokki"
+                        location="Giza, Egypt"
                         delay="0"
                         achievements={[
-                            "Process Optimization & Workflow Management",
-                            "Cross-functional Team Leadership",
-                            "Performance Analytics & Reporting"
+                            "Leading technical operations and multi-account infrastructures",
+                            "Architecting scalable enterprise ERP modules (49.92% of production commits)",
+                            "Building automated Zoom integrations and real-time QR-code pipelines"
                         ]}
                     />
 
@@ -47,25 +47,22 @@ const OperationsRoadmap = () => {
                         location="Cairo, Egypt (Hybrid)"
                         delay="50"
                         achievements={[
-                            "New Business Development",
-                            "Project Planning & Execution",
-                            "Team Coordination & Resource Management",
-                            "Quality Assurance & Delivery"
+                            "New Business Development and cross-functional project execution",
+                            "Optimizing internal pipeline tracking mechanics",
+                            "Streamlining delivery cycles and tactical operations"
                         ]}
                     />
 
                     <TimelineItem
-                        date="Nov 2024 - Oct 2025"
-                        title="Sales Manager"
+                        date="Jul 2024 - Oct 2025"
+                        title="Sales Manager & Coordinator"
                         company="Barah Co-working Space"
-                        location="Giza, Al Jizah, Egypt"
+                        location="Giza, Egypt"
                         delay="100"
                         achievements={[
-                            "Leading sales team and driving company growth objectives",
-                            "Developing sales strategies & building long-term client relationships",
-                            "Training and motivating the sales team to achieve peak performance",
-                            "Managing sales process from initial contact to closing deals",
-                            "Analyzing market and competitors to develop innovative solutions"
+                            "Led the sales team to execute strategic growth objectives",
+                            "Orchestrated scheduling workflows and resolved resource allocation conflicts",
+                            "Executed direct outbound sales processes and exceeded acquisition targets"
                         ]}
                         kpi={[
                             { label: "Team Leadership", value: 90 },
@@ -74,69 +71,28 @@ const OperationsRoadmap = () => {
                     />
 
                     <TimelineItem
-                        date="Sep 2024 - Nov 2024"
-                        title="Booking Coordinator"
-                        company="Barah Co-working Space"
-                        location="Giza, Al Jizah, Egypt"
-                        type="Part-time"
+                        date="2021 - Present"
+                        title="Integrated Operator & Vibe Coder"
+                        company="Freelance / Independent Projects"
+                        location="Remote"
                         delay="150"
                         achievements={[
-                            "Problem Solving & Decision-Making",
-                            "Booking Management & Coordination",
-                            "Client Communication & Support"
+                            "Architected custom web applications and L&D operational configurations",
+                            "Built external automation loops utilizing customized Webhooks, n8n, Zapier",
+                            "Utilizing React/Next.js and Supabase"
                         ]}
                     />
 
                     <TimelineItem
-                        date="Jul 2024 - Nov 2024"
-                        title="Sales Specialist"
-                        company="Barah Co-working Space"
-                        location="Al Jizah, Egypt"
+                        date="Jun 2023 - May 2025"
+                        title="Previous Roles (Sales & Customer Service)"
+                        company="Optical Soft | Teleperformance | Americana"
+                        location="Egypt"
                         delay="200"
                         achievements={[
-                            "Sales & Sales Processes",
-                            "Client Acquisition & Relationship Building",
-                            "Revenue Generation"
-                        ]}
-                    />
-
-                    <TimelineItem
-                        date="Jan 2024 - May 2024"
-                        title="Sales Specialist"
-                        company="Optical Soft"
-                        type="Part-time"
-                        delay="250"
-                        achievements={[
-                            "Sales Operations",
-                            "Product Knowledge & Consultation",
-                            "Customer Service Excellence"
-                        ]}
-                    />
-
-                    <TimelineItem
-                        date="Jan 2024 - Mar 2024"
-                        title="Customer Service Representative"
-                        company="Teleperformance - Orange Egypt"
-                        location="New Cairo, Cairo, Egypt"
-                        delay="300"
-                        achievements={[
-                            "Consistently ranked among top performers for two months",
-                            "Efficiently handled customer inquiries and issues",
-                            "Maintained professionalism and empathy",
-                            "Collaborated with teams for issue resolution"
-                        ]}
-                    />
-
-                    <TimelineItem
-                        date="Jun 2023 - Oct 2023"
-                        title="Customer Service Representative"
-                        company="Americana Group"
-                        location="Egypt"
-                        delay="350"
-                        achievements={[
-                            "Foundation in Customer Operations",
-                            "Telephone Reception & Customer Support",
-                            "Client Services & Team Collaboration"
+                            "Managed high-volume telephone reception lines and customer support channels",
+                            "Consistently ranked among top performers in technical support",
+                            "Managed part-time account consulting and pitched tailored product setups"
                         ]}
                     />
 
