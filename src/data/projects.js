@@ -2,6 +2,36 @@
 // Old projects preserved (minus pettouch) + 6 new projects added from content.template.json
 const projects = [
 
+    {
+        id: 'instant-erp',
+        category: 'systems',
+        icon: '📊',
+        gallery: [
+            { src: '/images/projects/instant-erp/dashboard.png' }
+        ],
+        titleEn: 'Instant ERP Systems Platform',
+        titleAr: 'نظام تخطيط موارد المؤسسة - Instant ERP',
+        subtitleEn: 'Enterprise Systems Engineer',
+        subtitleAr: 'مهندس أنظمة المؤسسة',
+        tagEn: 'Laravel + Livewire + Zoom + APIs',
+        tagAr: 'Laravel + Livewire + Zoom + APIs',
+        descEn: 'A comprehensive enterprise ERP system, managing Zoom scheduling conflict resolution, Google APIs, WAPilot WhatsApp CRM, and secure Spatie role-based access for operations.',
+        descAr: 'نظام ERP متكامل للمؤسسة، يدير جدولة زووم الذكية ومنع التعارضات، وتكاملات Google APIs، ونظام مبيعات وخدمة WhatsApp CRM من WAPilot، وصلاحيات الأدوار Spatie لحماية العمليات.',
+        challengeEn: 'Managing hundreds of lectures, tracking active leads, validating offline student attendance cards, processing refunds safely, and coordinating scheduling conflicts across 22 Zoom accounts manually was highly inefficient and error-prone.',
+        challengeAr: 'كانت إدارة مئات المحاضرات وتتبع العملاء المهتمين، والتحقق المالي المباشر عند تسجيل حضور الطلاب بالـ QR، ومعالجة طلبات الاسترداد بأمان، وحل تعارضات جدولة Zoom يدويًا، تتسبب في ضياع الكثير من الوقت ووقوع أخطاء تشغيلية.',
+        solutionEn: 'Engineered core ERP modules using Laravel 12 and Livewire. Integrated Zoom Webhooks & Conflict Resolver, Google Classroom & Drive, WAPilot WhatsApp API, QR Attendance Scanner linked with finance checks, and Spatie RBAC.',
+        solutionAr: 'تطوير وحدات ERP الأساسية باستخدام Laravel 12 و Livewire. تم ربط نظام جدولة Zoom مع فاحص التعارضات التلقائي، ومزامنة Google Classroom/Drive، وإرسال الإشعارات التلقائية عبر WhatsApp (WAPilot)، وبناء مسح حضور بالـ QR مرتبط بالتحقق المالي المباشر، وتأمين النظام بصلاحيات Spatie.',
+        impactEn: 'Achieved 49.92% of production commits (+107k lines code), eliminating time conflicts for Zoom sessions, preventing lead leakage, establishing instant QR/financial alerts, and delivering a secure enterprise B2B workflow.',
+        impactAr: 'تحقيق 49.92% من التزامات الكود المصدرى (+107 ألف سطر كود)، ومنع تداخل المحاضرات بالكامل، وتفادي فقدان العملاء المحتملين، وتوفير تنبيهات فورية للمشرفين عند الحضور، وضمان دورة حياة مالية مؤمنة بنسبة 100%.',
+        techStack: ['Laravel 12', 'Livewire', 'Alpine.js', 'Zoom API / Webhooks', 'Google API', 'Spatie Permission', 'WAPilot', 'Laravel Reverb / Echo'],
+        metrics: [
+            { valueEn: '49.92%', labelEn: 'Production Commits', labelAr: 'مساهمة في الكود المصدري' },
+            { valueEn: '+107k', labelEn: 'Lines of Code Added', labelAr: 'سطر برمجي مضاف' },
+            { valueEn: '100%', labelEn: 'Conflict Resolution', labelAr: 'حل تعارضات الجدولة تلقائياً' },
+            { valueEn: 'Secure', labelEn: 'Spatie RBAC Auth', labelAr: 'أمان كامل للأدوار والصلاحيات' },
+        ],
+    },
+
     // ── OLD PROJECTS (kept as-is) ────────────────────────────────────────────
 
     {

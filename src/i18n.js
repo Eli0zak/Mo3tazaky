@@ -63,6 +63,7 @@ const resources = {
             skills_title: 'THE INTEGRATED ARSENAL',
             skills_subtitle: 'Tools that power the operation.',
             skills_ops: 'Operations & L&D Logic',
+            skills_systems: 'Enterprise Systems & APIs',
             skills_ai: 'AI-Powered Vibe Coding',
             skills_secure: 'Secure Infrastructure',
 
@@ -145,6 +146,7 @@ const resources = {
             skills_title: 'الترسانة المتكاملة',
             skills_subtitle: 'الأدوات التي تُشغّل العملية.',
             skills_ops: 'العمليات والمنطق البرمجي',
+            skills_systems: 'الأنظمة البرمجية وتكامل الـ APIs',
             skills_ai: 'التطوير بالذكاء الاصطناعي',
             skills_secure: 'البنية التحتية الآمنة',
 

@@ -15,6 +15,22 @@ const skillsData = [
         ]
     },
     {
+        categoryKey: 'skills_systems',
+        color: 'orange',
+        items: [
+            { name: 'Laravel 12 / PHP 8.2', icon: '🐘' },
+            { name: 'Livewire / Alpine.js', icon: '⚡' },
+            { name: 'Zoom API & Webhooks', icon: '📹' },
+            { name: 'Google Classroom APIs', icon: '🔑' },
+            { name: 'WAPilot WhatsApp API', icon: '💬' },
+            { name: 'WebSockets (Reverb / Echo)', icon: '📡' },
+            { name: 'Spatie Auth (RBAC)', icon: '🛡️' },
+            { name: 'cPanel / Webmail Admin', icon: '📧' },
+            { name: 'phpMyAdmin / MySQL', icon: '🐬' },
+            { name: 'cPanel Server Management', icon: '🎛️' },
+        ]
+    },
+    {
         categoryKey: 'skills_ai',
         color: 'purple',
         items: [
@@ -22,6 +38,8 @@ const skillsData = [
             { name: 'Claude', icon: '🧠' },
             { name: 'Gemini', icon: '✨' },
             { name: 'Antigravity', icon: '🚀' },
+            { name: 'StitchMCP', icon: '🧩' },
+            { name: 'Model Context Protocol (MCP)', icon: '🔌' },
             { name: 'Custom Gems', icon: '💎' },
         ]
     },
@@ -40,6 +58,7 @@ const colorMap = {
     cyan: 'var(--primary-blue)',
     purple: 'rgba(160, 100, 255, 0.8)',
     green: 'rgba(0, 200, 100, 0.8)',
+    orange: 'rgba(255, 130, 0, 0.85)',
 };
 
 export default function SkillsSection() {
