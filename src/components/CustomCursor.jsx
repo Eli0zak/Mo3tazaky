@@ -22,13 +22,13 @@ export default function CustomCursor() {
             mouseY = e.clientY;
         };
 
-        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
-        // Lerp (Linear Interpolation) loop for GPU-accelerated 60/120fps rendering
+        // High-speed Lerp loop for GPU-accelerated ultra-responsive cursor tracking
         let animFrame;
         const tick = () => {
-            cursorX += (mouseX - cursorX) * 0.18;
-            cursorY += (mouseY - cursorY) * 0.18;
+            cursorX += (mouseX - cursorX) * 0.65;
+            cursorY += (mouseY - cursorY) * 0.65;
 
             const currentCursor = cursorRef.current;
             if (currentCursor) {
@@ -39,35 +39,23 @@ export default function CustomCursor() {
         };
         tick();
 
-        // Hover state triggers
-        const handleHoverStart = () => setCursorType('hover');
-        const handleHoverEnd = () => setCursorType('default');
-
-        const attachListeners = () => {
-            const targets = document.querySelectorAll('a, button, .project-card, .studio-link-card, .social-link-item, [role="button"], .cta-button, .filter-btn');
-            targets.forEach(el => {
-                el.removeEventListener('mouseenter', handleHoverStart);
-                el.removeEventListener('mouseleave', handleHoverEnd);
-                el.addEventListener('mouseenter', handleHoverStart);
-                el.addEventListener('mouseleave', handleHoverEnd);
-            });
+        // High-performance event delegation for hover target detection
+        const hoverSelector = 'a, button, .project-card, .studio-link-card, .social-link-item, [role="button"], .cta-button, .filter-btn';
+        
+        const handleMouseOver = (e) => {
+            if (e.target && e.target.closest && e.target.closest(hoverSelector)) {
+                setCursorType('hover');
+            } else {
+                setCursorType('default');
+            }
         };
 
-        attachListeners();
-        
-        // Listen for dynamically created elements
-        const observer = new MutationObserver(attachListeners);
-        observer.observe(document.body, { childList: true, subtree: true });
+        window.addEventListener('mouseover', handleMouseOver, { passive: true });
 
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mouseover', handleMouseOver);
             cancelAnimationFrame(animFrame);
-            observer.disconnect();
-            const targets = document.querySelectorAll('a, button, .project-card, .studio-link-card, .social-link-item, [role="button"], .cta-button, .filter-btn');
-            targets.forEach(el => {
-                el.removeEventListener('mouseenter', handleHoverStart);
-                el.removeEventListener('mouseleave', handleHoverEnd);
-            });
         };
     }, []);
 

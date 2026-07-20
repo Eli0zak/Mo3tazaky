@@ -1,23 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useMode } from '../context/ModeContext';
 
 const aboutImg = '/photo.png';
 
 const Hero = () => {
     const { mode } = useMode();
-    const [offset, setOffset] = useState({ x: 0, y: 0 });
+    const parallaxRef = useRef(null);
 
     useEffect(() => {
+        let animId = null;
+        let targetX = 0;
+        let targetY = 0;
+
         const handleMouseMove = (e) => {
             const mouseX = e.clientX / window.innerWidth;
             const mouseY = e.clientY / window.innerHeight;
-            const moveX = (mouseX - 0.5) * 20;
-            const moveY = (mouseY - 0.5) * 20;
-            setOffset({ x: moveX, y: moveY });
+            targetX = (mouseX - 0.5) * 20;
+            targetY = (mouseY - 0.5) * 20;
+
+            if (!animId) {
+                animId = requestAnimationFrame(() => {
+                    if (parallaxRef.current) {
+                        parallaxRef.current.style.transform = `translate3d(${targetX}px, ${targetY}px, 0)`;
+                    }
+                    animId = null;
+                });
+            }
         };
 
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mousemove', handleMouseMove, { passive: true });
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+            if (animId) cancelAnimationFrame(animId);
+        };
     }, []);
 
     const scrollToContact = () => {
@@ -27,9 +42,10 @@ const Hero = () => {
     return (
         <section id="command-center" className="command-center">
             <div
+                ref={parallaxRef}
                 className="parallax-bg"
                 id="parallaxBg"
-                style={{ transform: `translate(${offset.x}px, ${offset.y}px)` }}
+                style={{ willChange: 'transform' }}
             >
                 <div className="grid-overlay"></div>
                 <div className="quote-container">

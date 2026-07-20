@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from 'react';
 
 export default function TiltWrapper({ children, className = '', style = {} }) {
     const cardRef = useRef(null);
-    const [tiltStyle, setTiltStyle] = useState({});
     const [isMobile, setIsMobile] = useState(true);
 
     useEffect(() => {
@@ -28,18 +27,16 @@ export default function TiltWrapper({ children, className = '', style = {} }) {
         const rX = -(mouseY / (height / 2)) * 7;
         const rY = (mouseX / (width / 2)) * 7;
 
-        setTiltStyle({
-            transform: `perspective(1000px) rotateX(${rX}deg) rotateY(${rY}deg) scale3d(1.02, 1.02, 1.02)`,
-            transition: 'transform 0.08s ease-out',
-        });
+        card.style.transform = `perspective(1000px) rotateX(${rX}deg) rotateY(${rY}deg) scale3d(1.02, 1.02, 1.02)`;
+        card.style.transition = 'none';
     };
 
     const handleMouseLeave = () => {
         if (isMobile) return;
-        setTiltStyle({
-            transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)',
-            transition: 'transform 0.4s ease-out',
-        });
+        const card = cardRef.current;
+        if (!card) return;
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        card.style.transition = 'transform 0.4s ease-out';
     };
 
     return (
@@ -48,7 +45,7 @@ export default function TiltWrapper({ children, className = '', style = {} }) {
             className={className}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            style={{ ...style, ...tiltStyle, transformStyle: 'preserve-3d' }}
+            style={{ ...style, transformStyle: 'preserve-3d', willChange: 'transform' }}
         >
             {children}
         </div>
